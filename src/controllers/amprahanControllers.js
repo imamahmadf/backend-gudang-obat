@@ -9,15 +9,19 @@ const {
   sequelize,
 } = require("../models");
 
+const { Op } = require("sequelize");
+
 module.exports = {
   postAmprahan: async (req, res) => {
     try {
-      const { puskesmasId, tanggal } = req.query;
+      const { puskesmasId, statusId } = req.query;
+
       console.log(req.query);
       const result = await amprahan.create({
         uptdId: puskesmasId,
-        tanggal,
-        status: 1,
+        tanggal: new Date(),
+        status: statusId,
+        isOpen: 1,
       });
       return res.status(200).json({
         message: "berhasi tambah data",
@@ -31,6 +35,7 @@ module.exports = {
     }
   },
   postAmprahanItem: async (req, res) => {
+    const transaction = await sequelize.transaction();
     try {
       const { noBatchId, userId, amprahanId, permintaan, stokAwal, obatId } =
         req.query;
@@ -43,6 +48,7 @@ module.exports = {
           where: {
             id: noBatchId,
           },
+          transaction,
         }
       );
 
@@ -54,26 +60,36 @@ module.exports = {
           where: {
             id: parseInt(obatId),
           },
+          transaction,
         }
       );
+
       const getTambahStok = await obat.findOne({
         where: {
           id: parseInt(obatId),
         },
+        transaction,
       });
-      const result = await amprahanItem.create({
-        noBatchId,
-        userId,
-        amprahanId,
-        permintaan,
-        sisa: getTambahStok.totalStok,
-      });
+
+      const result = await amprahanItem.create(
+        {
+          noBatchId,
+          userId,
+          amprahanId,
+          permintaan,
+          sisa: getTambahStok.totalStok,
+        },
+        { transaction }
+      );
+
+      await transaction.commit();
 
       return res.status(200).json({
         message: "berhasi menambahkan amprahan item",
         result,
       });
     } catch (err) {
+      await transaction.rollback();
       console.log(err);
       return res.status(500).json({
         message: err,
@@ -85,30 +101,29 @@ module.exports = {
     try {
       const result = await amprahan.findAll({
         where: {
-          status: 1,
+          status: {
+            [Op.between]: [1, 5],
+          },
         },
         include: [
           {
             model: uptd,
+            required: true, // Pastikan required berada di dalam include
           },
         ],
-        where: {
-          status: 1,
-        },
-        required: true,
       });
       return res.send(result);
     } catch (err) {
       console.log(err);
       return res.status(500).json({
-        message: err,
+        message: err.message || "Internal Server Error",
       });
     }
   },
 
   getAllAmprahan: async (req, res) => {
     try {
-      console.log("MASUK AMPRAHAN");
+      console.log(req.query, "MASUK AMPRAHAN");
       const startDate = req.query.startDate;
       const endDate = req.query.endDate;
       const filter = req.query.filter;
@@ -117,6 +132,8 @@ module.exports = {
       const time = req.query.time || "ASC";
       const offset = limit * page;
       const whereCondition = {};
+      const status = parseInt(req.query.jenis);
+      console.log(status, "STATUS AMPRAHAN");
       if (req.query?.startDate) {
         whereCondition.startDate = {
           [Op.gt]: startDate,
@@ -133,15 +150,14 @@ module.exports = {
         include: [
           {
             model: uptd,
-            // where: {
-            //   status: 1,
-            // },
           },
         ],
+
         offset,
+
         limit,
         where: {
-          status: 1,
+          status,
         },
       });
       const totalRows = result.count;
@@ -163,6 +179,13 @@ module.exports = {
 
   getDetailAmprahan: async (req, res) => {
     const id = req.params.amprahanId;
+    const penanggungjawab = parseInt(req.query.penanggungjawab);
+    const whereCondition = {};
+    console.log(penanggungjawab);
+    if (penanggungjawab) {
+      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+      whereCondition.profileId = penanggungjawab;
+    }
     try {
       const result = await amprahan.findOne({
         where: {
@@ -177,6 +200,7 @@ module.exports = {
                 include: [
                   {
                     model: obat,
+                    where: whereCondition,
                     include: [
                       {
                         model: satuan,
@@ -184,6 +208,7 @@ module.exports = {
                     ],
                   },
                 ],
+                required: true,
               },
             ],
             // where: {
@@ -200,6 +225,220 @@ module.exports = {
       });
     } catch (err) {
       console.log(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  statusAmprahan: async (req, res) => {
+    try {
+      const result = await amprahan.findAll({
+        where: {
+          status: {
+            [Op.between]: [1, 5],
+          },
+          isOpen: 1,
+        },
+        include: [
+          {
+            model: uptd,
+            required: true, // Pastikan required berada di dalam include
+          },
+        ],
+      });
+      return res.send(result);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        message: err.message || "Internal Server Error",
+      });
+    }
+  },
+
+  tutupAmprahan: async (req, res) => {
+    console.log(req.params.id, "TUTOPPPPPPPPPP");
+    const id = req.params.id;
+    try {
+      const result = await amprahan.update({ isOpen: 0 }, { where: { id } });
+      return res.status(200).send(result);
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  ubahPermintaan: async (req, res) => {
+    const {
+      id,
+      permintaan,
+      permintaanBaru,
+      sisa,
+      obatId,
+      totalStok,
+      stok,
+      noBatchId,
+    } = req.body;
+    console.log(req.body);
+    const transaction = await sequelize.transaction();
+    try {
+      const editPermintaan = await amprahanItem.update(
+        {
+          permintaan: permintaanBaru,
+          sisa: sisa + permintaan - permintaanBaru,
+        },
+        {
+          where: { id },
+        },
+        transaction
+      );
+
+      const editTotalStok = await obat.update(
+        {
+          totalStok: totalStok + permintaan - permintaanBaru,
+        },
+        {
+          where: {
+            id: obatId,
+          },
+        },
+        transaction
+      );
+
+      const ubahStok = await noBatch.update(
+        {
+          stok: stok + permintaan - permintaanBaru,
+        },
+        {
+          where: {
+            id: noBatchId,
+          },
+        }
+      );
+
+      await transaction.commit();
+      return res.status(200).json({
+        message: "Berhasil ubah permintaan",
+      });
+    } catch (err) {
+      await transaction.rollback();
+      console.error(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  deleteAmprahanItem: async (req, res) => {
+    const { id, permintaan, sisa, obatId, totalStok, stok, noBatchId } =
+      req.body;
+    const transaction = await sequelize.transaction();
+    try {
+      const deletePermintaan = await amprahanItem.destroy(
+        {
+          where: {
+            id,
+          },
+        },
+        transaction
+      );
+      const editTotalStok = await obat.update(
+        {
+          totalStok: totalStok + permintaan,
+        },
+        {
+          where: {
+            id: obatId,
+          },
+        },
+        transaction
+      );
+
+      const ubahStok = await noBatch.update(
+        {
+          stok: stok + permintaan,
+        },
+        {
+          where: {
+            id: noBatchId,
+          },
+        }
+      );
+
+      await transaction.commit();
+      return res.status(200).json({
+        message: "data berhasil dihapus",
+      });
+    } catch (err) {
+      await transaction.rollback();
+      console.error(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  kadaluwarsa: async (req, res) => {
+    const { obatId, stok, perusahaanId, noBatchId, userId } = req.body;
+    const transaction = await sequelize.transaction();
+    const tanggal = new Date();
+    try {
+      const buatAmprahan = await amprahan.create(
+        {
+          uptdId: perusahaanId,
+          tanggal,
+          status: 6,
+          isOpen: 0,
+        },
+        transaction
+      );
+
+      const ubahStok = await noBatch.update(
+        {
+          stok: 0,
+        },
+        {
+          where: {
+            id: noBatchId,
+          },
+          transaction,
+        }
+      );
+
+      const ubahTotalStok = await obat.update(
+        {
+          totalStok: sequelize.literal(`totalStok - ${parseInt(stok)}`),
+        },
+        {
+          where: {
+            id: parseInt(noBatchId),
+          },
+          transaction,
+        }
+      );
+
+      const getTambahStok = await obat.findOne({
+        where: {
+          id: parseInt(obatId),
+        }.transaction,
+      });
+      const result = await amprahanItem.create(
+        {
+          noBatchId,
+          userId,
+          amprahanId: buatAmprahan.id,
+          permintaan: stok,
+          sisa: getTambahStok.totalStok,
+        },
+        { transaction }
+      );
+
+      await transaction.commit();
+
+      return res.status(200).json({
+        message: "berhasi menghapus obat",
+      });
+    } catch (err) {
+      await transaction.rollback();
+      console.error(err);
       return res.status(500).json({
         message: err,
       });

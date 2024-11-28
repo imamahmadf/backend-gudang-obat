@@ -10,6 +10,8 @@ const {
   userRouters,
   uptdRouters,
   amprahanRouters,
+  excelRouters,
+  stokOpnameRouters,
 } = require("./routes");
 
 const PORT = process.env.PORT || 8000;
@@ -27,6 +29,7 @@ app.use(
 app.use(express.json());
 app.use("/api", express.static(`${__dirname}/public`));
 app.use("/obat", express.static(`${__dirname}/public/obat`));
+app.use("/no-batch", express.static(`${__dirname}/public/noBatch`));
 // app.use(
 //   "/tenant_profile_pic",
 //   express.static(`${__dirname}/public/tenant_profile_pic`)
@@ -45,6 +48,8 @@ app.use("/api/no-batch", noBatchRoutes);
 app.use("/api/user", userRouters);
 app.use("/api/uptd", uptdRouters);
 app.use("/api/amprahan", amprahanRouters);
+app.use("/api/excel", excelRouters);
+app.use("/api/stok-opname", stokOpnameRouters);
 // app.use("/api/specialprice", specialPriceRouters);
 // app.use("/api/property", propertyRouters);
 // app.use("/api/room", roomRouters);

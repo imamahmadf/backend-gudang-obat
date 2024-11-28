@@ -1,5 +1,12 @@
 const { db, dbquery } = require("../database");
-const { uptd, amprahan, amprahanItem, noBatch } = require("../models");
+const {
+  uptd,
+  amprahan,
+  amprahanItem,
+  noBatch,
+  perusahaan,
+  sequelize,
+} = require("../models");
 
 module.exports = {
   getOnePuskesmas: async (req, res) => {
@@ -49,17 +56,34 @@ module.exports = {
     }
   },
   addPerusahaan: async (req, res) => {
+    const transaction = await sequelize.transaction();
     const { nama, alamat } = req.query;
     try {
-      const newPerusahaan = await uptd.create({
-        nama,
-        status: 2,
-      });
+      const newPerusahaan = await uptd.create(
+        {
+          nama,
+          status: 2,
+        },
+        transaction
+      );
+
+      const newPerusahaanTable = await perusahaan.create(
+        {
+          id: newPerusahaan.id,
+          nama,
+        },
+        transaction
+      );
+
+      await transaction.commit();
       return res.status(200).json({
         message: "success add data",
-        result: newPerusahaan,
+        // result: newPerusahaan,
       });
     } catch (err) {
+      await transaction.rollback();
+
+      console.log(err);
       return res.status(500).json({
         message: err.toString(),
         code: 500,

@@ -9,6 +9,8 @@ const {
   amprahan,
   amprahanItem,
   uptd,
+  perusahaan,
+  sequelize,
   // puskesmas,
 } = require("../models");
 const fs = require("fs");
@@ -61,6 +63,7 @@ module.exports = {
         order: [
           // ["updatedAt", `${time}`],
           ["nama", `${alfabet}`],
+          [{ model: noBatch }, "exp", "ASC"],
         ],
         offset: offset,
         limit: limit,
@@ -79,12 +82,24 @@ module.exports = {
           },
           {
             model: noBatch,
-            attributes: ["noBatch", "exp", "harga", "stok", "id"],
-            required: true,
+            attributes: ["noBatch", "exp", "harga", "stok", "id", "kotak"],
+            where: {
+              status: 1,
+              stok: { [Op.gt]: 0 },
+            },
+
+            required: false,
           },
         ],
       });
-      const totalRows = result.count;
+      const totalRows = await obat.count({
+        // include: [
+        //   {
+        //     model: noBatch,
+        //     required: true, // Hanya hitung yang memiliki relasi
+        //   },
+        // ],
+      });
       const totalPage = Math.ceil(totalRows / limit);
 
       const perhitungan = await obat.findAll({
@@ -121,35 +136,125 @@ module.exports = {
       });
     }
   },
+
+  getObatMasuk: async (req, res) => {
+    const search = req.query.search_query || "";
+    const alfabet = req.query.alfabet || "ASC";
+    try {
+      const result = await obat.findAll({
+        where: { nama: { [Op.like]: "%" + search + "%" } },
+        attributes: ["nama", "pic", "id", "totalStok"],
+        order: [
+          // ["updatedAt", `${time}`],
+          ["nama", `${alfabet}`],
+        ],
+
+        include: [
+          {
+            model: kategori,
+            attributes: ["nama"],
+          },
+          {
+            model: kelasterapi,
+            attributes: ["nama"],
+          },
+          {
+            model: satuan,
+            attributes: ["nama"],
+          },
+          {
+            model: noBatch,
+            attributes: [
+              "noBatch",
+              "exp",
+              "harga",
+              "stok",
+              "id",
+              "perusahaanId",
+              "pic",
+            ],
+            include: [
+              {
+                model: perusahaan,
+              },
+            ],
+            where: {
+              status: 0,
+            },
+            required: true,
+          },
+        ],
+      });
+
+      const resultStatus = await amprahan.findAll({
+        where: {
+          status: {
+            [Op.between]: [1, 5],
+          },
+          isOpen: 1,
+        },
+        include: [
+          {
+            model: uptd,
+            required: true, // Pastikan required berada di dalam include
+          },
+        ],
+      });
+
+      res.status(200).send({
+        result,
+        massage: "Berhasil Verifikasi Obat Masuk",
+        resultStatus,
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        massage: err,
+      });
+    }
+  },
   getNamaObat: async (req, res) => {
+    const transaction = await sequelize.transaction();
     try {
       const result = await obat.findAll({
         order: [["nama", "ASC"]],
+        transaction,
       });
 
       const seederSatuan = await satuan.findAll({
         order: [["nama", "ASC"]],
+        transaction,
       });
 
       const seederKelasTerapi = await kelasterapi.findAll({
         order: [["nama", "ASC"]],
+        transaction,
       });
+
       const seederKategori = await kategori.findAll({
         order: [["nama", "ASC"]],
+        transaction,
       });
 
       const profileStaff = await profile.findAll({
         attributes: ["nama", "id"],
         order: [["nama", "ASC"]],
+        transaction,
       });
+
+      await transaction.commit();
       res.status(200).send({
         result,
         seederSatuan,
         seederKategori,
         seederKelasTerapi,
         profileStaff,
+        // statusAmprahan,
       });
     } catch (err) {
+      if (!transaction.finished) {
+        await transaction.rollback();
+      }
       console.log(err);
       return res.status(500).json({
         massage: err,
@@ -261,6 +366,7 @@ module.exports = {
         where: {
           id,
         },
+        order: [[{ model: noBatch }, "exp", "ASC"]],
         include: [
           {
             model: kategori,
@@ -276,8 +382,14 @@ module.exports = {
           },
           {
             model: noBatch,
-            attributes: ["noBatch", "exp", "harga", "stok"],
+            attributes: ["noBatch", "exp", "harga", "stok", "pic", "kotak"],
             required: true,
+            include: [
+              {
+                model: perusahaan,
+                attributes: ["nama"],
+              },
+            ],
           },
         ],
       });
@@ -315,7 +427,7 @@ module.exports = {
         limit: limit,
         attributes: ["permintaan", "sisa"],
 
-        order: [[{ model: amprahan }, "tanggal", time]],
+        order: [[{ model: amprahan }, "createdAt", time]],
       });
 
       const totalRows = amprahanData.count;
@@ -328,6 +440,39 @@ module.exports = {
         totalRows,
         totalPage,
       });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+  getKadaluwarsa: async (req, res) => {
+    try {
+      const sixMonthsFromNow = new Date();
+      sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
+
+      const result = await obat.findAll({
+        include: [
+          {
+            model: noBatch,
+            where: {
+              status: 1,
+              exp: {
+                [Op.lt]: sixMonthsFromNow, // Filter untuk exp kurang dari 6 bulan dari hari ini
+              },
+            },
+            include: [
+              {
+                model: perusahaan,
+                attributes: ["nama"],
+              },
+            ],
+          },
+        ],
+      });
+
+      return res.status(200).send({ result });
     } catch (err) {
       return res.status(500).json({
         message: err.toString(),

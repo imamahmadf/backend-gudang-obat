@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.obat);
       this.hasMany(models.amprahanItem);
+      this.belongsTo(models.perusahaan);
     }
   }
   noBatch.init(
@@ -19,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       harga: DataTypes.INTEGER,
       obatId: DataTypes.INTEGER,
       stok: DataTypes.INTEGER,
+      status: DataTypes.INTEGER,
+      pic: DataTypes.STRING,
+      perusahaanId: DataTypes.INTEGER,
+      kotak: DataTypes.INTEGER,
     },
     {
       sequelize,

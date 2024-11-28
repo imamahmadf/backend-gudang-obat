@@ -24,9 +24,21 @@ module.exports = {
       stok: {
         type: Sequelize.INTEGER,
       },
+      status: {
+        type: Sequelize.INTEGER,
+      },
+      perusahaanId: {
+        type: Sequelize.INTEGER,
+      },
+      pic: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+      },
+      kotak: {
+        type: Sequelize.INTEGER,
       },
       updatedAt: {
         allowNull: false,
