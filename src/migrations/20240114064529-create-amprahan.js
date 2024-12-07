@@ -9,9 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      status: {
+      StatusAmprahanId: {
         type: Sequelize.INTEGER,
       },
+      alokasiId: { type: Sequelize.INTEGER },
       tanggal: {
         type: Sequelize.DATE,
       },

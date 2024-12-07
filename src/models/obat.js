@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.noBatch);
+      this.hasMany(models.riwayat);
       this.belongsTo(models.satuan);
       this.belongsTo(models.kategori);
       this.belongsTo(models.kelasterapi);
@@ -18,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       nama: DataTypes.STRING,
       kelasTerapiId: DataTypes.INTEGER,
-      pic: DataTypes.STRING,
+
       satuanId: DataTypes.INTEGER,
       profileId: DataTypes.INTEGER,
       kategoriId: DataTypes.INTEGER,

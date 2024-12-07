@@ -63,7 +63,7 @@ module.exports = {
         include: [
           {
             model: profile,
-            attributes: ["nama", "profilePic"],
+            attributes: ["nama", "profilePic", "id"],
           },
           {
             model: userRole,
@@ -109,7 +109,7 @@ module.exports = {
       });
       const newUserRole = await userRole.create({
         userId: id,
-        roleId: 3,
+        roleId: 1,
       });
       // const result = await sequelize.transaction(async (t) => {
       //   const user = await user.create(

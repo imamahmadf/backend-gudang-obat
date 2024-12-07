@@ -20,7 +20,7 @@ module.exports = {
       const result = await amprahan.create({
         uptdId: puskesmasId,
         tanggal: new Date(),
-        status: statusId,
+        StatusAmprahanId: statusId,
         isOpen: 1,
       });
       return res.status(200).json({
@@ -101,7 +101,7 @@ module.exports = {
     try {
       const result = await amprahan.findAll({
         where: {
-          status: {
+          StatusAmprahanId: {
             [Op.between]: [1, 5],
           },
         },
@@ -132,8 +132,8 @@ module.exports = {
       const time = req.query.time || "ASC";
       const offset = limit * page;
       const whereCondition = {};
-      const status = parseInt(req.query.jenis);
-      console.log(status, "STATUS AMPRAHAN");
+      const statusAmprahanId = parseInt(req.query.jenis);
+      console.log(statusAmprahanId, "STATUS AMPRAHAN");
       if (req.query?.startDate) {
         whereCondition.startDate = {
           [Op.gt]: startDate,
@@ -157,7 +157,7 @@ module.exports = {
 
         limit,
         where: {
-          status,
+          statusAmprahanId,
         },
       });
       const totalRows = result.count;
@@ -234,7 +234,7 @@ module.exports = {
     try {
       const result = await amprahan.findAll({
         where: {
-          status: {
+          statusAmprahanId: {
             [Op.between]: [1, 5],
           },
           isOpen: 1,
@@ -377,18 +377,19 @@ module.exports = {
     }
   },
   kadaluwarsa: async (req, res) => {
-    const { obatId, stok, perusahaanId, noBatchId, userId } = req.body;
+    const { obatId, stokEXP, perusahaanId, noBatchId, userId } = req.body;
     const transaction = await sequelize.transaction();
+    console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     const tanggal = new Date();
     try {
       const buatAmprahan = await amprahan.create(
         {
           uptdId: perusahaanId,
           tanggal,
-          status: 6,
+          StatusAmprahanId: 6,
           isOpen: 0,
         },
-        transaction
+        { transaction }
       );
 
       const ubahStok = await noBatch.update(
@@ -405,27 +406,30 @@ module.exports = {
 
       const ubahTotalStok = await obat.update(
         {
-          totalStok: sequelize.literal(`totalStok - ${parseInt(stok)}`),
+          totalStok: sequelize.literal(`totalStok - ${parseInt(stokEXP)}`),
         },
         {
           where: {
-            id: parseInt(noBatchId),
+            id: parseInt(obatId),
           },
-          transaction,
-        }
+        },
+        { transaction }
       );
 
-      const getTambahStok = await obat.findOne({
-        where: {
-          id: parseInt(obatId),
-        }.transaction,
-      });
+      const getTambahStok = await obat.findOne(
+        {
+          where: {
+            id: parseInt(obatId),
+          },
+        },
+        { transaction }
+      );
       const result = await amprahanItem.create(
         {
           noBatchId,
           userId,
           amprahanId: buatAmprahan.id,
-          permintaan: stok,
+          permintaan: stokEXP,
           sisa: getTambahStok.totalStok,
         },
         { transaction }

@@ -12,6 +12,9 @@ const {
   amprahanRouters,
   excelRouters,
   stokOpnameRouters,
+  pengaturanRouters,
+  profileRouters,
+  alokasiRouters,
 } = require("./routes");
 
 const PORT = process.env.PORT || 8000;
@@ -30,6 +33,7 @@ app.use(express.json());
 app.use("/api", express.static(`${__dirname}/public`));
 app.use("/obat", express.static(`${__dirname}/public/obat`));
 app.use("/no-batch", express.static(`${__dirname}/public/noBatch`));
+app.use("/profile", express.static(`${__dirname}/public/profile`));
 // app.use(
 //   "/tenant_profile_pic",
 //   express.static(`${__dirname}/public/tenant_profile_pic`)
@@ -50,6 +54,9 @@ app.use("/api/uptd", uptdRouters);
 app.use("/api/amprahan", amprahanRouters);
 app.use("/api/excel", excelRouters);
 app.use("/api/stok-opname", stokOpnameRouters);
+app.use("/api/pengaturan", pengaturanRouters);
+app.use("/api/profile", profileRouters);
+app.use("/api/alokasi", alokasiRouters);
 // app.use("/api/specialprice", specialPriceRouters);
 // app.use("/api/property", propertyRouters);
 // app.use("/api/room", roomRouters);

@@ -2,9 +2,34 @@
 
 const currentDate = new Date();
 const roles = [
-  { id: 1, name: "admin", createdAt: currentDate, updatedAt: currentDate },
-  { id: 2, name: "staf", createdAt: currentDate, updatedAt: currentDate },
-  { id: 3, name: "puskesmas", createdAt: currentDate, updatedAt: currentDate },
+  { id: 1, name: "tamu", createdAt: currentDate, updatedAt: currentDate },
+  { id: 2, name: "total stok", createdAt: currentDate, updatedAt: currentDate },
+  {
+    id: 3,
+    name: "tambah barang",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
+  {
+    id: 4,
+    name: "tambah semua barang",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
+  {
+    id: 5,
+    name: "terima barang",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
+  { id: 6, name: "obat exp", createdAt: currentDate, updatedAt: currentDate },
+  { id: 7, name: "amprahan", createdAt: currentDate, updatedAt: currentDate },
+  {
+    id: 8,
+    name: "super admin",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
 ];
 
 /** @type {import('sequelize-cli').Migration} */

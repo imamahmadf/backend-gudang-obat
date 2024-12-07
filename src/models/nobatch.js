@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.obat);
       this.hasMany(models.amprahanItem);
       this.belongsTo(models.perusahaan);
+      this.belongsTo(models.sumberDana);
     }
   }
   noBatch.init(
@@ -24,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       pic: DataTypes.STRING,
       perusahaanId: DataTypes.INTEGER,
       kotak: DataTypes.INTEGER,
+      sumberDanaId: DataTypes.INTEGER,
     },
     {
       sequelize,

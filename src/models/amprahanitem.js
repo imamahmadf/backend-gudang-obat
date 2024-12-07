@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       amprahanId: DataTypes.INTEGER,
       permintaan: DataTypes.INTEGER,
       sisa: DataTypes.INTEGER,
+      catatan: DataTypes.STRING,
     },
     {
       sequelize,

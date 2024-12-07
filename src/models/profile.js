@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.belongsTo(models.user);
+      this.hasMany(models.riwayat);
     }
   }
   profile.init(
@@ -18,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       profilePic: DataTypes.STRING,
       nip: DataTypes.INTEGER,
       userId: DataTypes.STRING,
+      jabatan: DataTypes.STRING,
     },
     {
       sequelize,

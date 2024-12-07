@@ -5,6 +5,9 @@ const uptdControllers = require("./uptdControllers");
 const amprahanControllers = require("./amprahanControllers");
 const excelControllers = require("./excelControllers");
 const stokOpnameControllers = require("./stokOpnameControllers");
+const pengaturanControllers = require("./pengaturanControllers");
+const profileControllers = require("./profileControllers");
+const alokasiControllers = require("./alokasiControllers");
 
 module.exports = {
   obatControllers,
@@ -14,4 +17,7 @@ module.exports = {
   amprahanControllers,
   excelControllers,
   stokOpnameControllers,
+  pengaturanControllers,
+  profileControllers,
+  alokasiControllers,
 };

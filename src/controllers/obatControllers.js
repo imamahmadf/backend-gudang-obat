@@ -11,6 +11,9 @@ const {
   uptd,
   perusahaan,
   sequelize,
+  StatusAmprahan,
+  sumberDana,
+  riwayat,
   // puskesmas,
 } = require("../models");
 const fs = require("fs");
@@ -19,28 +22,71 @@ const Sequelize = require("sequelize");
 
 module.exports = {
   addObat: async (req, res) => {
+    const transaction = await sequelize.transaction();
+    const currentDate = new Date();
     try {
-      const { nama, kelasTerapiId, pic, satuanId, profileId, kategoriId } =
-        req.body;
-      console.log(req.file.filename, "filenama tes123");
-      const filePath = "obat";
-      const { filename } = req.file;
-      const newObat = await obat.create({
-        nama,
-        pic: `/${filePath}/${filename}`,
-        kelasTerapiId,
+      const nama = req.query.nama;
+      const kelasTerapiId = parseInt(req.query.kelasTerapiId);
+      const satuanId = parseInt(req.query.satuanId);
+      const profileId = parseInt(req.query.profileId);
+      const kategoriId = parseInt(req.query.kategoriId);
+      const sumberDanaId = parseInt(req.query.sumberDanaId);
+      const profileReudxId = parseInt(req.query.profileReduxId);
+      // console.log(req.file.filename, "filenama tes123");
+      console.log(req.query, "TES OBAT");
 
-        satuanId,
-        profileId,
-        kategoriId,
-        totalStok: 0,
-      });
+      const newObat = await obat.create(
+        {
+          nama: nama,
+          kelasTerapiId,
+          satuanId,
+          profileId,
+          kategoriId,
+          totalStok: 0,
+        },
+        { transaction }
+      );
 
+      const SONoBatch = await noBatch.create(
+        {
+          noBatch: "SO",
+          exp: currentDate,
+          harga: 0,
+          obatId: newObat.id,
+          sumberDanaId,
+          stok: 0,
+          status: 2,
+          perusahaanId: 1,
+          pic: null,
+          kotak: 0,
+        },
+        { transaction }
+      );
+      console.log(newObat.id, "INI ID ONBATNYAAAAA");
+      // const riwayatObat = await riwayat.create(
+      //   {
+      //     obatId: parseInt(newObat.id),
+      //     userId: profileId,
+      //     riwayat: `obat ${newObat.nama} berhasil dibuat oleh `,
+      //   },
+      //   { transaction }
+      // );
+
+      const riwayatObat = await riwayat.create(
+        {
+          obatId: newObat.id,
+          profileId: profileReudxId,
+          riwayat: "Obat Berhasil ditambahkan !",
+        },
+        { transaction }
+      );
+      await transaction.commit();
       return res.status(200).json({
         message: "success add data",
         results: newObat,
       });
     } catch (err) {
+      await transaction.rollback();
       console.log(err);
       return res.status(500).json({
         message: err,
@@ -59,7 +105,7 @@ module.exports = {
     try {
       const result = await obat.findAndCountAll({
         where: { nama: { [Op.like]: "%" + search + "%" } },
-        attributes: ["nama", "pic", "id"],
+        attributes: ["nama", "id"],
         order: [
           // ["updatedAt", `${time}`],
           ["nama", `${alfabet}`],
@@ -82,7 +128,15 @@ module.exports = {
           },
           {
             model: noBatch,
-            attributes: ["noBatch", "exp", "harga", "stok", "id", "kotak"],
+            attributes: [
+              "noBatch",
+              "exp",
+              "harga",
+              "stok",
+              "id",
+              "kotak",
+              "pic",
+            ],
             where: {
               status: 1,
               stok: { [Op.gt]: 0 },
@@ -143,7 +197,7 @@ module.exports = {
     try {
       const result = await obat.findAll({
         where: { nama: { [Op.like]: "%" + search + "%" } },
-        attributes: ["nama", "pic", "id", "totalStok"],
+        attributes: ["nama", "id", "totalStok"],
         order: [
           // ["updatedAt", `${time}`],
           ["nama", `${alfabet}`],
@@ -188,7 +242,7 @@ module.exports = {
 
       const resultStatus = await amprahan.findAll({
         where: {
-          status: {
+          StatusAmprahanId: {
             [Op.between]: [1, 5],
           },
           isOpen: 1,
@@ -242,12 +296,15 @@ module.exports = {
         transaction,
       });
 
+      const seedSumberDana = await sumberDana.findAll({ transaction });
+
       await transaction.commit();
       res.status(200).send({
         result,
         seederSatuan,
         seederKategori,
         seederKelasTerapi,
+        seedSumberDana,
         profileStaff,
         // statusAmprahan,
       });
@@ -258,6 +315,7 @@ module.exports = {
       console.log(err);
       return res.status(500).json({
         massage: err,
+        pesan: "errror bos",
       });
     }
   },
@@ -289,34 +347,54 @@ module.exports = {
 
   getOneObat: async (req, res) => {
     const id = req.params.obatId;
-
+    const transaction = await sequelize.transaction();
     try {
-      const result = await obat.findOne({
-        where: {
-          id,
+      const result = await obat.findOne(
+        {
+          where: {
+            id,
+          },
+          include: [
+            {
+              model: kategori,
+              attributes: ["nama", "id"],
+            },
+            {
+              model: kelasterapi,
+              attributes: ["nama", "id"],
+            },
+            {
+              model: satuan,
+              attributes: ["nama", "id"],
+            },
+            {
+              model: noBatch,
+              attributes: ["noBatch", "exp", "harga", "stok", "id"],
+              required: true,
+            },
+          ],
         },
-        include: [
-          {
-            model: kategori,
-            attributes: ["nama"],
+        { transaction }
+      );
+
+      const getRiwayat = await riwayat.findAll(
+        {
+          where: {
+            obatId: id,
           },
-          {
-            model: kelasterapi,
-            attributes: ["nama"],
-          },
-          {
-            model: satuan,
-            attributes: ["nama"],
-          },
-          {
-            model: noBatch,
-            attributes: ["noBatch", "exp", "harga", "stok"],
-            required: true,
-          },
-        ],
-      });
-      return res.send(result);
+          include: [
+            {
+              model: profile,
+              attributes: ["nama"],
+            },
+          ],
+        },
+        { transaction }
+      );
+      await transaction.commit();
+      return res.status(200).send({ result, getRiwayat });
     } catch (err) {
+      await transaction.rollback();
       return res.status(500).json({
         message: err.toString(),
         code: 500,
@@ -380,6 +458,7 @@ module.exports = {
             model: satuan,
             attributes: ["nama"],
           },
+
           {
             model: noBatch,
             attributes: ["noBatch", "exp", "harga", "stok", "pic", "kotak"],
@@ -389,7 +468,11 @@ module.exports = {
                 model: perusahaan,
                 attributes: ["nama"],
               },
+              { model: sumberDana, attributes: ["sumber"] },
             ],
+            where: {
+              status: 1,
+            },
           },
         ],
       });
@@ -418,8 +501,12 @@ module.exports = {
 
                 where: whereConditionPKM,
               },
+              {
+                model: StatusAmprahan,
+              },
             ],
-            attributes: ["status", "tanggal"],
+            attributes: ["statusAmprahanId", "tanggal"],
+
             where: whereCondition,
           },
         ],
@@ -474,6 +561,48 @@ module.exports = {
 
       return res.status(200).send({ result });
     } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+
+  patchObat: async (req, res) => {
+    const transaction = await sequelize.transaction();
+    const { nama, kelasterapiId, satuanId, kategoriId, id, profileReduxId } =
+      req.body;
+
+    console.log(req.body);
+
+    const riwayatFE = "";
+    try {
+      const editDataObat = await obat.update(
+        {
+          nama,
+          kelasTerapiId: parseInt(kelasterapiId),
+          satuanId: parseInt(satuanId),
+          kategoriId: parseInt(kategoriId),
+        },
+        {
+          where: {
+            id,
+          },
+        },
+        { transaction }
+      );
+
+      const tambahRiwayat = await riwayat.create({
+        obatId: id,
+        profileId: profileReduxId,
+        riwayat: riwayatFE,
+      });
+
+      await transaction.commit();
+      return res.status(200).json({ massage: "data obat berhasil diubah" });
+    } catch (err) {
+      console.log(err);
+      await transaction.rollback();
       return res.status(500).json({
         message: err.toString(),
         code: 500,

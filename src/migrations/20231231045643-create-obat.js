@@ -11,13 +11,13 @@ module.exports = {
       },
       nama: {
         type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
       },
       kelasTerapiId: {
         type: Sequelize.INTEGER,
       },
-      pic: {
-        type: Sequelize.STRING,
-      },
+
       satuanId: {
         type: Sequelize.INTEGER,
       },

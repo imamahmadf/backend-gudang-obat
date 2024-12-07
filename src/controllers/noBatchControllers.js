@@ -10,8 +10,16 @@ const {
 module.exports = {
   postNoBatch: async (req, res) => {
     try {
-      const { noBatch2, exp, stok, harga, obatId, perusahaan, kotak } =
-        req.body;
+      const {
+        noBatch2,
+        exp,
+        stok,
+        harga,
+        obatId,
+        perusahaan,
+        kotak,
+        sumberDana,
+      } = req.body;
       console.log(req.body);
       const filePath = "noBatch";
 
@@ -32,6 +40,7 @@ module.exports = {
         perusahaanId: parseInt(perusahaan),
         pic: picFE,
         kotak: parseInt(kotak),
+        sumberDanaId: parseInt(sumberDana),
       });
 
       return res.status(200).json({
@@ -100,7 +109,7 @@ module.exports = {
       const currentDate = new Date();
       const tambahObat = await amprahan.create(
         {
-          status: 5,
+          StatusAmprahanId: 5,
           tanggal: currentDate,
           uptdId: parseInt(perusahaanId),
           isOpen: 0,

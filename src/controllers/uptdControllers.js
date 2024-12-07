@@ -44,7 +44,7 @@ module.exports = {
     try {
       const result = await uptd.findAll({
         where: {
-          status: 2,
+          statusTujuanId: 2,
         },
       });
       return res.send(result);
@@ -58,11 +58,12 @@ module.exports = {
   addPerusahaan: async (req, res) => {
     const transaction = await sequelize.transaction();
     const { nama, alamat } = req.query;
+    console.log(req.query, "cek perusahaan");
     try {
       const newPerusahaan = await uptd.create(
         {
           nama,
-          status: 2,
+          statusTujuanId: 2,
         },
         transaction
       );
@@ -94,7 +95,7 @@ module.exports = {
     try {
       const result = await uptd.findAll({
         where: {
-          status: 1,
+          statusTujuanId: 1,
         },
         attributes: ["nama", "id"],
         order: [["nama", "ASC"]],

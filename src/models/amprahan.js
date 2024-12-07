@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.hasMany(models.amprahanItem);
       this.belongsTo(models.uptd);
+      this.belongsTo(models.StatusAmprahan);
+      this.belongsTo(models.alokasi);
     }
   }
   amprahan.init(
     {
-      status: DataTypes.INTEGER,
+      StatusAmprahanId: DataTypes.INTEGER,
       tanggal: DataTypes.DATE,
       uptdId: DataTypes.INTEGER,
+      alokasiId: DataTypes.INTEGER,
       isOpen: DataTypes.INTEGER,
     },
     {
