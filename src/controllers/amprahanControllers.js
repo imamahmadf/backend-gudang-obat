@@ -35,6 +35,7 @@ module.exports = {
     }
   },
   postAmprahanItem: async (req, res) => {
+    console.log(req.query, "CEK DATA UNTUK ALOKASI DAN AMPRAHAN");
     const transaction = await sequelize.transaction();
     try {
       const { noBatchId, userId, amprahanId, permintaan, stokAwal, obatId } =

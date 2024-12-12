@@ -7,6 +7,7 @@ const excelRouters = require("./excelRoutes");
 const stokOpnameRouters = require("./stokOpnameRouters");
 const pengaturanRouters = require("./pengaturanRouters");
 const profileRouters = require("./profileRouters");
+const alokasiRouters = require("./alokasiRouters");
 module.exports = {
   obatRoutes,
   noBatchRoutes,
@@ -17,4 +18,5 @@ module.exports = {
   stokOpnameRouters,
   pengaturanRouters,
   profileRouters,
+  alokasiRouters,
 };

@@ -23,7 +23,7 @@ module.exports = {
         include: [
           {
             model: noBatch,
-            attributes: ["noBatch", "exp", "status", "id"],
+            attributes: ["noBatch", "exp", "status", "id", "stok"],
           },
         ],
       });

@@ -6,12 +6,32 @@ const {
   role,
   user,
   sequelize,
+  amprahan,
 } = require("../models");
 
 module.exports = {
   getAllProfile: async (req, res) => {
     try {
       const result = await profile.findAll({
+        include: [
+          {
+            model: user,
+            attributes: ["id"],
+            include: [
+              {
+                model: userRole,
+                attributes: ["id"],
+                include: [
+                  {
+                    model: role,
+                    attributes: ["name"],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        attributes: ["nama", "jabatan", "id"],
         order: [["nama", "ASC"]],
       });
 
@@ -74,9 +94,19 @@ module.exports = {
           id,
         },
       });
+
+      // const CekAmprahan = await amprahan.findAll({
+      //   where: {
+      //     statusAmprahanId: {
+      //       [Op.between]: [1, 5],
+      //     },
+      //     isOpen: 1,
+      //   },
+      // });
       // console.log(globalState);
       return res.status(200).json({
         globalState,
+        tes: "aaa",
       });
     } catch (err) {
       //console.log(err);
@@ -152,6 +182,59 @@ module.exports = {
         newUserRole,
         message: "success add data",
         code: 200,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+
+  getRole: async (req, res) => {
+    try {
+      const result = await role.findAll({ attributes: ["name", "id"] });
+      return res.status(200).send(result);
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+
+  addRole: async (req, res) => {
+    console.log(req.query, "CEK TAMBA USER ROLE");
+
+    try {
+      const { userId, roleId } = req.query;
+
+      const result = await userRole.create({
+        userId,
+        roleId,
+      });
+
+      return res.status(200).json({
+        result,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+  deleteRole: async (req, res) => {
+    console.log(req.query);
+    try {
+      const { userId, id } = req.query;
+
+      const result = await userRole.destroy({
+        where: { userId, id },
+      });
+
+      return res.status(200).json({
+        result,
       });
     } catch (err) {
       return res.status(500).json({
