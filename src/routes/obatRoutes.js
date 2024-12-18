@@ -13,5 +13,7 @@ routers.get("/edit/:obatId", obatControllers.getOneObat);
 routers.get("/detail/:obatId", obatControllers.getDetailObat);
 routers.get("/get/kadaluwarsa", obatControllers.getKadaluwarsa);
 routers.patch("/patch/obat", obatControllers.patchObat);
+routers.patch("/patch/penanggung-jawab", obatControllers.patchPenanggungJawab);
+routers.get("/get/penanggung-jawab", obatControllers.getPenanggungJawab);
 
 module.exports = routers;

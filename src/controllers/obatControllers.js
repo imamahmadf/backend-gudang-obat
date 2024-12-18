@@ -30,7 +30,7 @@ module.exports = {
       const satuanId = parseInt(req.query.satuanId);
       const profileId = parseInt(req.query.profileId);
       const kategoriId = parseInt(req.query.kategoriId);
-      const sumberDanaId = parseInt(req.query.sumberDanaId);
+      // const sumberDanaId = parseInt(req.query.sumberDanaId);
       const profileReudxId = parseInt(req.query.profileReduxId);
       // console.log(req.file.filename, "filenama tes123");
       console.log(req.query, "TES OBAT");
@@ -53,7 +53,7 @@ module.exports = {
           exp: currentDate,
           harga: 0,
           obatId: newObat.id,
-          sumberDanaId,
+          // sumberDanaId,
           stok: 0,
           status: 2,
           perusahaanId: 1,
@@ -369,8 +369,19 @@ module.exports = {
             },
             {
               model: noBatch,
-              attributes: ["noBatch", "exp", "harga", "stok", "id"],
+              attributes: [
+                "noBatch",
+                "exp",
+                "harga",
+                "stok",
+                "id",
+                "pic",
+                "kotak",
+              ],
               required: true,
+              where: {
+                status: 1,
+              },
             },
           ],
         },
@@ -512,7 +523,7 @@ module.exports = {
         ],
         offset: offset,
         limit: limit,
-        attributes: ["permintaan", "sisa"],
+        attributes: ["permintaan", "sisa", "catatan"],
 
         order: [[{ model: amprahan }, "createdAt", time]],
       });
@@ -570,19 +581,19 @@ module.exports = {
 
   patchObat: async (req, res) => {
     const transaction = await sequelize.transaction();
-    const { nama, kelasterapiId, satuanId, kategoriId, id, profileReduxId } =
+    const { nama, kelasterapiFE, satuanFE, kategoriFE, id, profileId, kode } =
       req.body;
 
-    console.log(req.body);
+    console.log(req.body, "DATA EDIT OBAT!!!!");
 
-    const riwayatFE = "";
+    let riwayatFE = "";
     try {
       const editDataObat = await obat.update(
         {
           nama,
-          kelasTerapiId: parseInt(kelasterapiId),
-          satuanId: parseInt(satuanId),
-          kategoriId: parseInt(kategoriId),
+          kelasTerapiId: parseInt(kelasterapiFE.id),
+          satuanId: parseInt(satuanFE.id),
+          kategoriId: parseInt(kategoriFE.id),
         },
         {
           where: {
@@ -592,17 +603,82 @@ module.exports = {
         { transaction }
       );
 
+      const getUpdateRiwayat = await obat.findOne(
+        {
+          where: {
+            id,
+          },
+          include: [
+            {
+              model: kategori,
+              attributes: ["nama", "id"],
+            },
+            {
+              model: kelasterapi,
+              attributes: ["nama", "id"],
+            },
+            {
+              model: satuan,
+              attributes: ["nama", "id"],
+            },
+          ],
+        },
+        { transaction }
+      );
+
+      if (kode === "kategori") {
+        riwayatFE = `kategori ${kategoriFE.nama} diubah menjadi ${getUpdateRiwayat.kategori.nama}`;
+      } else if (kode === "satuan") {
+        riwayatFE = `satuan ${satuanFE.nama} diubah menjadi ${getUpdateRiwayat.satuan.nama}`;
+      } else if (kode === "kelasterapi") {
+        riwayatFE = `kelas terapi ${kelasterapiFE.nama} diubah menjadi ${getUpdateRiwayat.kelasterapi.nama}`;
+      } else if (kode === "nama") {
+        riwayatFE = `nama Obat diubah menjadi ${getUpdateRiwayat.nama}`;
+      }
+
       const tambahRiwayat = await riwayat.create({
         obatId: id,
-        profileId: profileReduxId,
+        profileId,
         riwayat: riwayatFE,
       });
 
       await transaction.commit();
-      return res.status(200).json({ massage: "data obat berhasil diubah" });
+      return res
+        .status(200)
+        .json({ massage: "data obat berhasil diubah", getUpdateRiwayat });
     } catch (err) {
       console.log(err);
       await transaction.rollback();
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+  patchPenanggungJawab: async (req, res) => {
+    console.log(req.body);
+  },
+  getPenanggungJawab: async (req, res) => {
+    const profileId = parseInt(req.query.profileId);
+    const whereCondition = {};
+    console.log(profileId);
+    if (profileId) {
+      whereCondition.profileId = profileId;
+    }
+    try {
+      const result = await obat.findAll({
+        attributes: ["nama", "profileId"],
+        where: whereCondition,
+        include: [
+          { model: satuan },
+          { model: kategori },
+          { model: kelasterapi },
+        ],
+      });
+      res.status(200).send({
+        result,
+      });
+    } catch (err) {
       return res.status(500).json({
         message: err.toString(),
         code: 500,

@@ -140,6 +140,48 @@ const uptds = [
     statusTujuanId: 1,
     updatedAt: currentDate,
   },
+  {
+    id: 21,
+    nama: "Lapkesda",
+    createdAt: currentDate,
+    statusTujuanId: 1,
+    updatedAt: currentDate,
+  },
+  {
+    id: 22,
+    nama: "RSUD Panglima Sebaya",
+    createdAt: currentDate,
+    statusTujuanId: 1,
+    updatedAt: currentDate,
+  },
+  {
+    id: 23,
+    nama: "RSUD Pratama",
+    createdAt: currentDate,
+    statusTujuanId: 1,
+    updatedAt: currentDate,
+  },
+  {
+    id: 24,
+    nama: "Dinkes Paser",
+    createdAt: currentDate,
+    statusTujuanId: 1,
+    updatedAt: currentDate,
+  },
+  {
+    id: 25,
+    nama: "EXP",
+    createdAt: currentDate,
+    statusTujuanId: 4,
+    updatedAt: currentDate,
+  },
+  {
+    id: 26,
+    nama: "Obat Rusak",
+    createdAt: currentDate,
+    statusTujuanId: 4,
+    updatedAt: currentDate,
+  },
 ];
 
 /** @type {import('sequelize-cli').Migration} */

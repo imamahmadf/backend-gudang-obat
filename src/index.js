@@ -15,6 +15,8 @@ const {
   pengaturanRouters,
   profileRouters,
   alokasiRouters,
+  rusakRouters,
+  kadaluwarsaRoutes,
 } = require("./routes");
 
 const PORT = process.env.PORT || 8000;
@@ -22,10 +24,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      process.env.WHITELISTED_DOMAIN &&
-        process.env.WHITELISTED_DOMAIN.split(","),
-    ],
+    origin: process.env.WHITELISTED_DOMAIN
+      ? process.env.WHITELISTED_DOMAIN.split(",")
+      : "*",
   })
 );
 
@@ -57,6 +58,8 @@ app.use("/api/stok-opname", stokOpnameRouters);
 app.use("/api/pengaturan", pengaturanRouters);
 app.use("/api/profile", profileRouters);
 app.use("/api/alokasi", alokasiRouters);
+app.use("/api/rusak", rusakRouters);
+app.use("/api/kadaluwarsa", kadaluwarsaRoutes);
 // app.use("/api/specialprice", specialPriceRouters);
 // app.use("/api/property", propertyRouters);
 // app.use("/api/room", roomRouters);
@@ -109,7 +112,12 @@ app.use(express.static(join(__dirname, clientPath)));
 
 // Serve the HTML page
 app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, clientPath, "index.html"));
+  res.sendFile(join(__dirname, clientPath, "index.html"), (err) => {
+    if (err) {
+      console.error("Error sending index.html:", err);
+      res.status(err.status).end();
+    }
+  });
 });
 
 //#endregion

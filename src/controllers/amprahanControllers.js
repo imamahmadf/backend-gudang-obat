@@ -236,7 +236,7 @@ module.exports = {
       const result = await amprahan.findAll({
         where: {
           statusAmprahanId: {
-            [Op.between]: [1, 5],
+            [Op.between]: [1, 7],
           },
           isOpen: 1,
         },
@@ -379,13 +379,14 @@ module.exports = {
   },
   kadaluwarsa: async (req, res) => {
     const { obatId, stokEXP, perusahaanId, noBatchId, userId } = req.body;
+    const expId = 25;
     const transaction = await sequelize.transaction();
     console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     const tanggal = new Date();
     try {
       const buatAmprahan = await amprahan.create(
         {
-          uptdId: perusahaanId,
+          uptdId: expId,
           tanggal,
           StatusAmprahanId: 6,
           isOpen: 0,

@@ -8,6 +8,8 @@ const stokOpnameControllers = require("./stokOpnameControllers");
 const pengaturanControllers = require("./pengaturanControllers");
 const profileControllers = require("./profileControllers");
 const alokasiControllers = require("./alokasiControllers");
+const rusakControllers = require("./rusakControllers");
+const kadaluwarsaControllers = require("./kadaluwarsaControllers");
 
 module.exports = {
   obatControllers,
@@ -20,4 +22,6 @@ module.exports = {
   pengaturanControllers,
   profileControllers,
   alokasiControllers,
+  rusakControllers,
+  kadaluwarsaControllers,
 };

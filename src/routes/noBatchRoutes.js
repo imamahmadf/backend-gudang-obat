@@ -16,3 +16,13 @@ routers.post("/terima", noBatchControllers.terima);
 module.exports = routers;
 
 routers.post("/tolak", noBatchControllers.tolak);
+
+routers.patch(
+  "/edit",
+  fileUploader({
+    destinationFolder: "noBatch",
+    fileType: "image",
+    prefix: "NOBATCH",
+  }).single("pic"),
+  noBatchControllers.editNobatch
+);

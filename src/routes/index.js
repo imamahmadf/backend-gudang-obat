@@ -8,6 +8,8 @@ const stokOpnameRouters = require("./stokOpnameRouters");
 const pengaturanRouters = require("./pengaturanRouters");
 const profileRouters = require("./profileRouters");
 const alokasiRouters = require("./alokasiRouters");
+const rusakRouters = require("./rusakRoutes");
+const kadaluwarsaRoutes = require("./kadaluwarsaRoutes");
 module.exports = {
   obatRoutes,
   noBatchRoutes,
@@ -19,4 +21,6 @@ module.exports = {
   pengaturanRouters,
   profileRouters,
   alokasiRouters,
+  rusakRouters,
+  kadaluwarsaRoutes,
 };

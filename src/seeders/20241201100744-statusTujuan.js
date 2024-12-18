@@ -20,6 +20,12 @@ const statusTujuans = [
     createdAt: currentDate,
     updatedAt: currentDate,
   },
+  {
+    id: 4,
+    status: "Obat EXP",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
 ];
 
 /** @type {import('sequelize-cli').Migration} */

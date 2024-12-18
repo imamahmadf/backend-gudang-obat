@@ -6,7 +6,7 @@ const {
   amprahan,
   obat,
 } = require("../models");
-
+const fs = require("fs");
 module.exports = {
   postNoBatch: async (req, res) => {
     try {
@@ -214,4 +214,68 @@ module.exports = {
   //     });
   //   }
   // },
+
+  editNobatch: async (req, res) => {
+    console.log(req.body);
+    console.log(req.file?.filename, "NAMA FOTO DISINI!!!!!!!!!!!!!!!!!!!!!!!!");
+
+    const { noBatchFE, exp } = req.body;
+    const harga = parseInt(req.body.harga);
+    const id = parseInt(req.body.id);
+    const kotak = parseInt(req.body.kotak);
+    const filePath = "nobatch";
+    const transaction = await sequelize.transaction();
+    try {
+      const old_img = await noBatch.findOne(
+        {
+          where: { id },
+        },
+        { transaction }
+      );
+
+      if (req.file?.filename) {
+        console.log("ADA FILE YANG DIKIRIM LOHHHHHHHHHH!!!!!!!!!!!");
+        const { filename } = req.file;
+        if (old_img.pic != null) {
+          const path = `${__dirname}/../public${old_img.pic}`;
+          fs.unlink(path, (err) => {
+            if (err) {
+              console.error(err);
+              return;
+            }
+          });
+        }
+        const updateNoBatch = await noBatch.update(
+          {
+            noBatch: noBatchFE,
+            exp,
+            harga,
+            kotak,
+            pic: `/${filePath}/${filename}`,
+          },
+          { where: { id }, transaction }
+        );
+      } else {
+        const updateNoBatch = await noBatch.update(
+          {
+            noBatch: noBatchFE,
+            exp,
+            harga,
+            kotak,
+          },
+          { where: { id }, transaction }
+        );
+      }
+      await transaction.commit();
+      return res.status(200).json({
+        message: "success ubah data",
+      });
+    } catch (err) {
+      await transaction.rollback();
+      console.log(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
 };
