@@ -12,7 +12,6 @@ module.exports = {
       nama: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
       },
       kelasTerapiId: {
         type: Sequelize.INTEGER,

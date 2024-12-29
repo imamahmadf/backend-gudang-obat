@@ -10,6 +10,8 @@ const profileControllers = require("./profileControllers");
 const alokasiControllers = require("./alokasiControllers");
 const rusakControllers = require("./rusakControllers");
 const kadaluwarsaControllers = require("./kadaluwarsaControllers");
+const puskesmasControllers = require("./puskesmasControllers");
+const laporanControllers = require("./laporanControllers");
 
 module.exports = {
   obatControllers,
@@ -24,4 +26,6 @@ module.exports = {
   alokasiControllers,
   rusakControllers,
   kadaluwarsaControllers,
+  puskesmasControllers,
+  laporanControllers,
 };

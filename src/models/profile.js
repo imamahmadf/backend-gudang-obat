@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.user);
       this.hasMany(models.riwayat);
+      this.hasMany(models.obat);
     }
   }
   profile.init(

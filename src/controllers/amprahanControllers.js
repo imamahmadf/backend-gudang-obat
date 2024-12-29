@@ -7,6 +7,8 @@ const {
   obat,
   satuan,
   sequelize,
+  StatusAmprahan,
+  alokasi,
 } = require("../models");
 
 const { Op } = require("sequelize");
@@ -244,8 +246,27 @@ module.exports = {
           {
             model: uptd,
             required: true, // Pastikan required berada di dalam include
+            attributes: ["nama"],
           },
+          {
+            model: amprahanItem,
+            limit: 2,
+            order: [["id", "DESC"]],
+            attributes: ["permintaan", "sisa", "id", "NoBatchId"],
+            include: [
+              {
+                model: noBatch,
+                attributes: ["noBatch", "exp", "pic", "kotak", "id", "stok"],
+                include: [
+                  { model: obat, attributes: ["nama", "id", "totalStok"] },
+                ],
+              },
+            ],
+          },
+          { model: StatusAmprahan, attributes: ["nama"] },
+          { model: alokasi, attributes: ["nama"] },
         ],
+        attributes: ["alokasiId", "tanggal", "isOpen", "StatusAmprahanId"],
       });
       return res.send(result);
     } catch (err) {

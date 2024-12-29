@@ -8,7 +8,7 @@ const {
   satuan,
   sequelize,
 } = require("../models");
-
+const { Op } = require("sequelize");
 module.exports = {
   getKadaluwarsa: async (req, res) => {
     try {

@@ -8,20 +8,59 @@ const {
   satuan,
   sequelize,
 } = require("../models");
-
+const { Op } = require("sequelize");
 module.exports = {
   getRusak: async (req, res) => {
+    const page = parseInt(req.query.page) || 0;
+    const limit = parseInt(req.query.limit) || 10;
+    const search = req.query.search_query || "";
+    const alfabet = req.query.alfabet || "ASC";
+    const time = req.query.time || "ASC";
+
+    const kelasTerapiId = parseInt(req.query.kelasTerapiId);
+    const kategoriId = parseInt(req.query.kategoriId);
+    const satuanId = parseInt(req.query.satuanId);
+    const offset = limit * page;
+    const whereCondition = {
+      nama: { [Op.like]: "%" + search + "%" },
+    };
+    if (kelasTerapiId) {
+      whereCondition.kelasTerapiId = kelasTerapiId;
+    }
+
+    if (kategoriId) {
+      whereCondition.kategoriId = kategoriId;
+    }
+
+    if (satuanId) {
+      whereCondition.satuanId = satuanId;
+    }
     try {
       const result = await amprahanItem.findAll({
         include: [
           { model: amprahan, where: { StatusAmprahanId: 7 } },
-          { model: noBatch, include: [{ model: obat }] },
+          { model: noBatch, include: [{ model: obat, where: whereCondition }] },
         ],
+        offset: offset,
+        limit: limit,
       });
 
+      const totalRows = await amprahanItem.count({
+        include: [
+          { model: amprahan, where: { StatusAmprahanId: 7 } },
+          { model: noBatch, include: [{ model: obat, where: whereCondition }] },
+        ],
+        offset: offset,
+        limit: limit,
+      });
+      const totalPage = Math.ceil(totalRows / limit);
       return res.status(200).json({
         message: "data berhasil diambil",
         result,
+        page,
+        limit,
+        totalRows,
+        totalPage,
       });
     } catch (err) {
       console.log(err);

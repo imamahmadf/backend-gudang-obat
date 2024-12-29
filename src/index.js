@@ -17,6 +17,8 @@ const {
   alokasiRouters,
   rusakRouters,
   kadaluwarsaRoutes,
+  puskesmasRouters,
+  laporanRouters,
 } = require("./routes");
 
 const PORT = process.env.PORT || 8000;
@@ -60,6 +62,8 @@ app.use("/api/profile", profileRouters);
 app.use("/api/alokasi", alokasiRouters);
 app.use("/api/rusak", rusakRouters);
 app.use("/api/kadaluwarsa", kadaluwarsaRoutes);
+app.use("/api/puskesmas", puskesmasRouters);
+app.use("/api/laporan", laporanRouters);
 // app.use("/api/specialprice", specialPriceRouters);
 // app.use("/api/property", propertyRouters);
 // app.use("/api/room", roomRouters);

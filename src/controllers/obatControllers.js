@@ -11,6 +11,9 @@ const {
   uptd,
   perusahaan,
   sequelize,
+  user,
+  userRole,
+  role,
   StatusAmprahan,
   sumberDana,
   riwayat,
@@ -100,12 +103,33 @@ module.exports = {
     const search = req.query.search_query || "";
     const alfabet = req.query.alfabet || "ASC";
     const time = req.query.time || "ASC";
+
+    const kelasTerapiId = parseInt(req.query.kelasTerapiId);
+    const kategoriId = parseInt(req.query.kategoriId);
+    const satuanId = parseInt(req.query.satuanId);
     const offset = limit * page;
     console.log(req.query);
+
+    const whereCondition = {
+      nama: { [Op.like]: "%" + search + "%" },
+    };
+
+    if (kelasTerapiId) {
+      whereCondition.kelasTerapiId = kelasTerapiId;
+    }
+
+    if (kategoriId) {
+      whereCondition.kategoriId = kategoriId;
+    }
+
+    if (satuanId) {
+      whereCondition.satuanId = satuanId;
+    }
+
     try {
       const result = await obat.findAndCountAll({
-        where: { nama: { [Op.like]: "%" + search + "%" } },
-        attributes: ["nama", "id"],
+        where: whereCondition,
+        attributes: ["nama", "id", "profileId"],
         order: [
           // ["updatedAt", `${time}`],
           ["nama", `${alfabet}`],
@@ -146,14 +170,7 @@ module.exports = {
           },
         ],
       });
-      const totalRows = await obat.count({
-        // include: [
-        //   {
-        //     model: noBatch,
-        //     required: true, // Hanya hitung yang memiliki relasi
-        //   },
-        // ],
-      });
+      const totalRows = await obat.count({ where: whereCondition });
       const totalPage = Math.ceil(totalRows / limit);
 
       const perhitungan = await obat.findAll({
@@ -268,10 +285,19 @@ module.exports = {
     }
   },
   getNamaObat: async (req, res) => {
+    const profileId = req.query.profileId;
+
+    console.log(profileId, "INI PROFILEID DRI FE");
+
+    const whereCondition = {};
+    if (parseInt(profileId) !== 0) {
+      whereCondition.profileId = profileId;
+    }
     const transaction = await sequelize.transaction();
     try {
       const result = await obat.findAll({
         order: [["nama", "ASC"]],
+        where: whereCondition,
         transaction,
       });
 
@@ -293,6 +319,28 @@ module.exports = {
       const profileStaff = await profile.findAll({
         attributes: ["nama", "id"],
         order: [["nama", "ASC"]],
+        include: [
+          {
+            model: user,
+            attributes: ["id"],
+            required: true,
+            include: [
+              {
+                model: userRole,
+                attributes: ["id"],
+                where: { roleId: 3 },
+                required: true,
+                include: [
+                  {
+                    model: role,
+                    attributes: ["name"],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+
         transaction,
       });
 
@@ -421,35 +469,28 @@ module.exports = {
     const limit = parseInt(req.query.limit) || 10;
     const time = req.query.time || "ASC";
     const puskesmasId = parseInt(req.query.puskesmasId);
+    const jenis = parseInt(req.query.jenis);
     const offset = limit * page;
-    console.log(
-      page,
-      limit,
-      id,
-      startDate,
-      endDate,
-      time,
-      puskesmasId,
-      "CEK DISINI WOI"
-    );
+    console.log(id, "CEK DISINI WOI");
     const whereCondition = {};
 
     const whereConditionPKM = {};
 
+    const whereConditionJenis = {};
+
     if (puskesmasId) {
       whereConditionPKM.id = puskesmasId; // Menggunakan langsung nilai ID tanpa perlu menempatkannya dalam properti 'puskesmasId'
     }
-    if (req.query?.startDate) {
+
+    if (jenis) {
+      whereConditionJenis.id = jenis;
+    }
+    if (startDate && endDate) {
       whereCondition.tanggal = {
-        [Op.lt]: endDate,
+        [Op.between]: [startDate, endDate],
       };
     }
 
-    if (req.query?.endDate) {
-      whereCondition.tanggal = {
-        [Op.lt]: endDate,
-      };
-    }
     try {
       const result = await obat.findOne({
         where: {
@@ -469,11 +510,12 @@ module.exports = {
             model: satuan,
             attributes: ["nama"],
           },
+          { model: profile },
 
           {
             model: noBatch,
             attributes: ["noBatch", "exp", "harga", "stok", "pic", "kotak"],
-            required: true,
+            required: false,
             include: [
               {
                 model: perusahaan,
@@ -491,7 +533,7 @@ module.exports = {
         include: [
           {
             model: noBatch,
-            attributes: ["stok", "exp", "noBatch"],
+            attributes: ["stok", "exp", "noBatch", "harga"],
             required: true,
             include: [
               {
@@ -505,27 +547,24 @@ module.exports = {
           },
           {
             model: amprahan,
-
             include: [
               {
                 model: uptd,
-
                 where: whereConditionPKM,
               },
               {
                 model: StatusAmprahan,
+                where: whereConditionJenis,
               },
             ],
             attributes: ["statusAmprahanId", "tanggal"],
-
             where: whereCondition,
           },
         ],
         offset: offset,
         limit: limit,
         attributes: ["permintaan", "sisa", "catatan"],
-
-        order: [[{ model: amprahan }, "createdAt", time]],
+        order: [["updatedAt", time]],
       });
 
       const totalRows = amprahanData.count;
@@ -656,24 +695,134 @@ module.exports = {
     }
   },
   patchPenanggungJawab: async (req, res) => {
+    const { selectedIds, profileId } = req.body; // Mengambil selectedIds dari req.body
     console.log(req.body);
+
+    try {
+      // Update data obat berdasarkan selectedIds
+      const [updatedCount] = await obat.update(
+        {
+          profileId,
+        },
+        {
+          where: {
+            id: selectedIds, // Menggunakan selectedIds untuk kondisi where
+          },
+        }
+      );
+
+      return res.status(200).json({
+        message: `${updatedCount} data obat berhasil diupdate`,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
   },
   getPenanggungJawab: async (req, res) => {
     const profileId = parseInt(req.query.profileId);
-    const whereCondition = {};
-    console.log(profileId);
-    if (profileId) {
-      whereCondition.profileId = profileId;
+    const kategoriId = parseInt(req.query.kategoriId);
+    const whereCondition = { profileId };
+    console.log(req.query.profileId);
+    console.log(req.body.profileId);
+    if (kategoriId) {
+      whereCondition.kategoriId = kategoriId;
     }
     try {
       const result = await obat.findAll({
-        attributes: ["nama", "profileId"],
+        attributes: ["nama", "profileId", "id"],
         where: whereCondition,
         include: [
           { model: satuan },
           { model: kategori },
           { model: kelasterapi },
         ],
+      });
+
+      const dataKategori = await kategori.findAll({
+        attributes: ["nama", "id"],
+      });
+      res.status(200).send({
+        result,
+        dataKategori,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+
+  getObatProfile: async (req, res) => {
+    const page = parseInt(req.query.page) || 0;
+    const limit = parseInt(req.query.limit) || 10;
+    const search = req.query.search_query || "";
+    const alfabet = req.query.alfabet || "ASC";
+    const time = req.query.time || "ASC";
+
+    const profileId = req.params.profileId;
+    console.log(profileId, "INI DATA");
+    const whereCondition = {
+      nama: { [Op.like]: "%" + search + "%" },
+    };
+
+    try {
+      // const result = await uptd.findAll({
+      //   include: [
+      //     {
+      //       model: amprahan,
+      //       required: true,
+      //       include: [
+      //         {
+      //           model: amprahanItem,
+      //           include: [
+      //             {
+      //               model: noBatch,
+      //               include: [{ model: obat, where: { profileId } }],
+      //             },
+      //           ],
+      //         },
+      //         { model: StatusAmprahan },
+      //       ],
+      //     },
+      //   ],
+      //   where: {
+      //     statusTujuanId: 1,
+      //   },
+      // });
+
+      const result = await amprahan.findAll({
+        attributes: ["tanggal"],
+        include: [
+          {
+            model: amprahanItem,
+            attributes: ["permintaan"],
+            include: [
+              {
+                model: noBatch,
+                attributes: ["noBatch", "exp"],
+                include: [
+                  {
+                    model: obat,
+                    where: { profileId },
+                    required: true,
+                    attributes: ["nama"],
+                  },
+                ],
+              },
+            ],
+          },
+          { model: uptd, attributes: ["nama"] },
+          { model: StatusAmprahan, attributes: ["nama"] },
+        ],
+        where: {
+          statusAmprahanId: {
+            [Op.between]: [1, 4],
+          },
+        },
       });
       res.status(200).send({
         result,

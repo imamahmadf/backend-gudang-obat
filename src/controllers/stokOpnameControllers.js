@@ -23,8 +23,23 @@ module.exports = {
         include: [
           {
             model: noBatch,
-            attributes: ["noBatch", "exp", "status", "id", "stok"],
+            // attributes: ["noBatch", "exp", "status", "id", "stok,", "kotak"],
+            include: [
+              {
+                model: amprahanItem,
+                attributes: ["id"],
+                include: [
+                  {
+                    model: amprahan,
+                    where: { StatusAmprahanId: [1, 2, 3, 4, 6, 7] },
+                    attributes: ["StatusAmprahanId"],
+                  },
+                ],
+              },
+            ],
+            // where: { status: 1 },
           },
+          { model: satuan, attributes: ["nama", "id"] },
         ],
       });
       return res.status(200).send(result);

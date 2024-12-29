@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.satuan);
       this.belongsTo(models.kategori);
       this.belongsTo(models.kelasterapi);
+      this.belongsTo(models.profile);
     }
   }
   obat.init(

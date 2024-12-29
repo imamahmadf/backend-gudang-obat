@@ -46,6 +46,44 @@ module.exports = {
     }
   },
 
+  getProfilePenanggungJawab: async (req, res) => {
+    try {
+      const result = await profile.findAll({
+        include: [
+          {
+            model: user,
+            attributes: ["id"],
+            required: true,
+            include: [
+              {
+                model: userRole,
+                attributes: ["id"],
+                where: { roleId: 3 },
+                required: true,
+                include: [
+                  {
+                    model: role,
+                    attributes: ["name"],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        attributes: ["nama", "jabatan", "id"],
+        order: [["nama", "ASC"]],
+      });
+
+      res.status(200).send({
+        result,
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
   getUserRole: async (req, res) => {
     try {
       const result = await profile.findAll({
@@ -136,6 +174,8 @@ module.exports = {
       const newProfile = await profile.create({
         nama: name,
         userId: id,
+        nip: 0,
+        jabatan: "kosong",
       });
       const newUserRole = await userRole.create({
         userId: id,
@@ -235,6 +275,35 @@ module.exports = {
 
       return res.status(200).json({
         result,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+  getUserById: async (req, res) => {
+    const id = req.query.id;
+
+    try {
+      const getUser = await profile.findOne({
+        where: { userId: id },
+        include: [
+          {
+            model: user,
+            required: true,
+            attributes: {
+              exclude: ["id", "userId", "UserId"],
+            },
+          },
+        ],
+      });
+
+      return res.status(200).send({
+        result: getUser,
+        message: "success",
+        code: 200,
       });
     } catch (err) {
       return res.status(500).json({
