@@ -154,6 +154,9 @@ module.exports = {
           {
             model: uptd,
           },
+          {
+            model: StatusAmprahan,
+          },
         ],
 
         offset,

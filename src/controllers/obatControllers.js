@@ -17,6 +17,7 @@ const {
   StatusAmprahan,
   sumberDana,
   riwayat,
+  aplikasi,
   // puskesmas,
 } = require("../models");
 const fs = require("fs");
@@ -150,6 +151,7 @@ module.exports = {
             model: satuan,
             attributes: ["nama"],
           },
+          { model: sumberDana },
           {
             model: noBatch,
             attributes: [
@@ -297,6 +299,12 @@ module.exports = {
     try {
       const result = await obat.findAll({
         order: [["nama", "ASC"]],
+        include: [
+          {
+            model: kategori,
+            attributes: ["id", "nama"],
+          },
+        ],
         where: whereCondition,
         transaction,
       });
@@ -507,6 +515,10 @@ module.exports = {
             attributes: ["nama"],
           },
           {
+            model: sumberDana,
+            attributes: ["sumber"],
+          },
+          {
             model: satuan,
             attributes: ["nama"],
           },
@@ -521,7 +533,6 @@ module.exports = {
                 model: perusahaan,
                 attributes: ["nama"],
               },
-              { model: sumberDana, attributes: ["sumber"] },
             ],
             where: {
               status: 1,
@@ -762,52 +773,51 @@ module.exports = {
     const search = req.query.search_query || "";
     const alfabet = req.query.alfabet || "ASC";
     const time = req.query.time || "ASC";
-
+    const startDate = req.query.startDate;
+    const endDate = req.query.endDate;
     const profileId = req.params.profileId;
-    console.log(profileId, "INI DATA");
+    const puskesmasId = req.query.puskesmasId || null;
+    console.log(profileId, startDate, endDate, puskesmasId, "INI DATA");
+
+    const whereConditionPKM = {};
     const whereCondition = {
-      nama: { [Op.like]: "%" + search + "%" },
+      statusAmprahanId: {
+        [Op.between]: [1, 4],
+      },
+      isOpen: 0,
     };
+    if (startDate && endDate) {
+      whereCondition.tanggal = {
+        [Op.between]: [startDate, endDate],
+      };
+    }
 
+    if (puskesmasId) {
+      whereConditionPKM.id = puskesmasId;
+    }
     try {
-      // const result = await uptd.findAll({
-      //   include: [
-      //     {
-      //       model: amprahan,
-      //       required: true,
-      //       include: [
-      //         {
-      //           model: amprahanItem,
-      //           include: [
-      //             {
-      //               model: noBatch,
-      //               include: [{ model: obat, where: { profileId } }],
-      //             },
-      //           ],
-      //         },
-      //         { model: StatusAmprahan },
-      //       ],
-      //     },
-      //   ],
-      //   where: {
-      //     statusTujuanId: 1,
-      //   },
-      // });
-
       const result = await amprahan.findAll({
         attributes: ["tanggal"],
         include: [
           {
             model: amprahanItem,
             attributes: ["permintaan"],
+            required: true,
             include: [
               {
                 model: noBatch,
                 attributes: ["noBatch", "exp"],
+                required: true,
                 include: [
                   {
                     model: obat,
                     where: { profileId },
+                    include: [
+                      {
+                        model: satuan,
+                        attributes: ["nama"],
+                      },
+                    ],
                     required: true,
                     attributes: ["nama"],
                   },
@@ -815,14 +825,15 @@ module.exports = {
               },
             ],
           },
-          { model: uptd, attributes: ["nama"] },
+          {
+            model: uptd,
+            required: true,
+            attributes: ["nama", "id"],
+            where: whereConditionPKM,
+          },
           { model: StatusAmprahan, attributes: ["nama"] },
         ],
-        where: {
-          statusAmprahanId: {
-            [Op.between]: [1, 4],
-          },
-        },
+        where: whereCondition,
       });
       res.status(200).send({
         result,

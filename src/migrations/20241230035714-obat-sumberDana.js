@@ -1,10 +1,10 @@
 "use strict";
 
-const constraintName = "fk-noBatch-sumberDana";
+const constraintName = "fk-obat-sumberDana";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.addConstraint("noBatches", {
+    await queryInterface.addConstraint("obats", {
       fields: ["sumberDanaId"],
       type: "foreign key",
       name: constraintName,
@@ -19,6 +19,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeConstraint("noBatches", constraintName);
+    await queryInterface.removeConstraint("obats", constraintName);
   },
 };

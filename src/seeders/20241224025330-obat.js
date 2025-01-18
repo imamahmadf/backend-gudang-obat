@@ -10,6 +10,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 7,
@@ -76,6 +82,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 8,
@@ -87,6 +94,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 9,
@@ -98,6 +106,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 10,
@@ -109,6 +118,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 11,
@@ -120,6 +130,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 12,
@@ -131,6 +142,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 13,
@@ -142,6 +154,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 14,
@@ -153,6 +166,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 15,
@@ -164,6 +178,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 16,
@@ -175,6 +190,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 17,
@@ -186,6 +202,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 18,
@@ -197,6 +214,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 19,
@@ -208,6 +226,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 20,
@@ -219,6 +238,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 21,
@@ -230,6 +250,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 22,
@@ -241,6 +262,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 23,
@@ -252,6 +274,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 24,
@@ -263,6 +286,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 25,
@@ -274,6 +298,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 26,
@@ -285,6 +310,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 27,
@@ -296,6 +322,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 28,
@@ -307,6 +334,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 29,
@@ -318,6 +346,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 30,
@@ -329,6 +358,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 31,
@@ -340,6 +370,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 32,
@@ -351,6 +382,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 33,
@@ -362,6 +394,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 34,
@@ -373,6 +406,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 35,
@@ -384,6 +418,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 36,
@@ -395,6 +430,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 37,
@@ -406,6 +442,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 38,
@@ -417,6 +454,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 39,
@@ -428,6 +466,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 40,
@@ -439,6 +478,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 41,
@@ -450,6 +490,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 42,
@@ -461,6 +502,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 43,
@@ -472,6 +514,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 44,
@@ -483,6 +526,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 45,
@@ -494,6 +538,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 46,
@@ -505,6 +550,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 47,
@@ -516,6 +562,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 48,
@@ -527,6 +574,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 49,
@@ -538,6 +586,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 50,
@@ -549,6 +598,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 51,
@@ -560,6 +610,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 52,
@@ -571,6 +622,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 53,
@@ -582,6 +634,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 54,
@@ -593,6 +646,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 55,
@@ -604,6 +658,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 56,
@@ -615,6 +670,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 57,
@@ -626,6 +682,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 58,
@@ -637,6 +694,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 59,
@@ -648,6 +706,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 60,
@@ -659,6 +718,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 61,
@@ -670,6 +730,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 62,
@@ -681,6 +742,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 63,
@@ -692,6 +754,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 64,
@@ -703,6 +766,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 65,
@@ -714,6 +778,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 66,
@@ -725,6 +790,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 67,
@@ -736,6 +802,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 68,
@@ -747,6 +814,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 69,
@@ -758,6 +826,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 70,
@@ -769,6 +838,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 71,
@@ -780,6 +850,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 72,
@@ -791,6 +862,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 73,
@@ -802,6 +874,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 74,
@@ -813,6 +886,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 75,
@@ -824,6 +898,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 76,
@@ -835,6 +910,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 77,
@@ -846,6 +922,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 78,
@@ -857,6 +934,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 79,
@@ -868,6 +946,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 80,
@@ -879,6 +958,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 81,
@@ -890,6 +970,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 82,
@@ -901,6 +982,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 83,
@@ -912,6 +994,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 84,
@@ -923,6 +1006,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 85,
@@ -934,6 +1018,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 86,
@@ -945,6 +1030,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 87,
@@ -956,6 +1042,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 88,
@@ -967,6 +1054,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 89,
@@ -978,6 +1066,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 90,
@@ -989,6 +1078,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 91,
@@ -1000,6 +1090,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 92,
@@ -1011,6 +1102,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 93,
@@ -1022,6 +1114,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 94,
@@ -1033,6 +1126,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 95,
@@ -1044,7 +1138,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
+  // ////////
   {
     id: 96,
     nama: "Amoxicillin 250 mg",
@@ -1055,6 +1151,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 97,
@@ -1066,6 +1163,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 98,
@@ -1077,6 +1175,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 99,
@@ -1088,6 +1187,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 100,
@@ -1099,6 +1199,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 101,
@@ -1110,6 +1211,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 102,
@@ -1121,6 +1223,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 103,
@@ -1132,6 +1235,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 104,
@@ -1143,6 +1247,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 105,
@@ -1154,6 +1259,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 106,
@@ -1165,6 +1271,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 107,
@@ -1176,6 +1283,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 108,
@@ -1187,6 +1295,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 109,
@@ -1198,6 +1307,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 110,
@@ -1209,6 +1319,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 111,
@@ -1220,6 +1331,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 112,
@@ -1231,6 +1343,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 113,
@@ -1242,6 +1355,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 114,
@@ -1253,6 +1367,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 115,
@@ -1264,6 +1379,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 116,
@@ -1275,6 +1391,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 117,
@@ -1286,6 +1403,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 118,
@@ -1297,6 +1415,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 119,
@@ -1308,6 +1427,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 120,
@@ -1319,6 +1439,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 121,
@@ -1330,6 +1451,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 122,
@@ -1341,6 +1463,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 123,
@@ -1352,6 +1475,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 124,
@@ -1363,6 +1487,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 125,
@@ -1374,6 +1499,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 126,
@@ -1385,6 +1511,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 127,
@@ -1396,6 +1523,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 128,
@@ -1407,6 +1535,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 129,
@@ -1418,6 +1547,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 130,
@@ -1429,6 +1559,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 131,
@@ -1440,6 +1571,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 132,
@@ -1451,6 +1583,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 133,
@@ -1462,6 +1595,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 134,
@@ -1473,6 +1607,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 135,
@@ -1484,6 +1619,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 136,
@@ -1495,6 +1631,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 137,
@@ -1506,6 +1643,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 138,
@@ -1517,6 +1655,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 139,
@@ -1528,6 +1667,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 140,
@@ -1539,6 +1679,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 141,
@@ -1550,6 +1691,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 142,
@@ -1561,6 +1703,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 143,
@@ -1572,6 +1715,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 144,
@@ -1583,6 +1727,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 145,
@@ -1594,6 +1739,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 146,
@@ -1605,6 +1751,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 147,
@@ -1616,6 +1763,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 148,
@@ -1627,6 +1775,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 149,
@@ -1638,6 +1787,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 150,
@@ -1649,7 +1799,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  // //////////
   {
     id: 151,
     nama: "Levofloksasin 500 Mg",
@@ -1660,6 +1812,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 152,
@@ -1671,6 +1824,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 153,
@@ -1682,6 +1836,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 154,
@@ -1693,6 +1848,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 155,
@@ -1704,6 +1860,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 156,
@@ -1715,6 +1872,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 157,
@@ -1726,6 +1884,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 158,
@@ -1737,6 +1896,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 159,
@@ -1748,6 +1908,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 160,
@@ -1759,6 +1920,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 161,
@@ -1770,6 +1932,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 162,
@@ -1781,6 +1944,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 163,
@@ -1792,6 +1956,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 164,
@@ -1803,6 +1968,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 165,
@@ -1814,6 +1980,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 166,
@@ -1825,6 +1992,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 167,
@@ -1836,6 +2004,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 168,
@@ -1847,6 +2016,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 169,
@@ -1858,6 +2028,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 170,
@@ -1869,6 +2040,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 171,
@@ -1880,6 +2052,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 172,
@@ -1891,6 +2064,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 173,
@@ -1902,6 +2076,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 174,
@@ -1913,6 +2088,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 175,
@@ -1924,6 +2100,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 176,
@@ -1935,6 +2112,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 177,
@@ -1946,6 +2124,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 178,
@@ -1957,6 +2136,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 179,
@@ -1968,6 +2148,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 180,
@@ -1979,6 +2160,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 181,
@@ -1990,6 +2172,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 182,
@@ -2001,6 +2184,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 183,
@@ -2012,6 +2196,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 184,
@@ -2023,6 +2208,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 185,
@@ -2034,6 +2220,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 186,
@@ -2045,6 +2232,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 187,
@@ -2056,6 +2244,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 188,
@@ -2067,6 +2256,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 189,
@@ -2078,6 +2268,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 190,
@@ -2089,6 +2280,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 191,
@@ -2100,6 +2292,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 192,
@@ -2111,6 +2304,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 193,
@@ -2122,6 +2316,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 194,
@@ -2133,6 +2328,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 195,
@@ -2144,6 +2340,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 196,
@@ -2155,6 +2352,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 197,
@@ -2166,6 +2364,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 198,
@@ -2177,6 +2376,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 199,
@@ -2188,6 +2388,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 200,
@@ -2199,6 +2400,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 201,
@@ -2210,6 +2412,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 202,
@@ -2221,6 +2424,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 203,
@@ -2232,6 +2436,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 204,
@@ -2243,6 +2448,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 205,
@@ -2254,6 +2460,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 206,
@@ -2265,6 +2472,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 207,
@@ -2276,6 +2484,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 208,
@@ -2287,6 +2496,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 209,
@@ -2298,6 +2508,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 210,
@@ -2309,6 +2520,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 211,
@@ -2320,6 +2532,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 212,
@@ -2331,6 +2544,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 213,
@@ -2342,6 +2556,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 214,
@@ -2353,6 +2568,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 215,
@@ -2364,6 +2580,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 216,
@@ -2375,6 +2592,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 217,
@@ -2386,6 +2604,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 218,
@@ -2397,6 +2616,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 219,
@@ -2408,6 +2628,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 220,
@@ -2419,6 +2640,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 221,
@@ -2430,6 +2652,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 222,
@@ -2441,6 +2664,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 223,
@@ -2452,6 +2676,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 224,
@@ -2463,6 +2688,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 225,
@@ -2474,6 +2700,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 226,
@@ -2485,6 +2712,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 227,
@@ -2496,6 +2724,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 228,
@@ -2507,6 +2736,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 229,
@@ -2518,6 +2748,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 230,
@@ -2529,6 +2760,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 231,
@@ -2540,6 +2772,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 232,
@@ -2551,6 +2784,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 233,
@@ -2562,6 +2796,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 234,
@@ -2573,6 +2808,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 235,
@@ -2584,6 +2820,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 236,
@@ -2595,6 +2832,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 237,
@@ -2606,6 +2844,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 238,
@@ -2617,6 +2856,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 239,
@@ -2628,6 +2868,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 240,
@@ -2639,6 +2880,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 241,
@@ -2650,6 +2892,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 242,
@@ -2661,6 +2904,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 243,
@@ -2672,6 +2916,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 244,
@@ -2683,7 +2928,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  // //////////////////////////////////////////////////////////////
   {
     id: 245,
     nama: "Silver Sulfadiazin 1%",
@@ -2694,6 +2941,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 246,
@@ -2705,6 +2953,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 247,
@@ -2716,6 +2965,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 248,
@@ -2727,6 +2977,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 249,
@@ -2738,6 +2989,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 250,
@@ -2749,6 +3001,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 251,
@@ -2760,6 +3013,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 252,
@@ -2771,6 +3025,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 253,
@@ -2782,6 +3037,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 254,
@@ -2793,6 +3049,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 255,
@@ -2804,6 +3061,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 256,
@@ -2815,6 +3073,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 257,
@@ -2826,6 +3085,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 258,
@@ -2837,6 +3097,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 259,
@@ -2848,6 +3109,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 260,
@@ -2859,6 +3121,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 261,
@@ -2870,6 +3133,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 262,
@@ -2881,6 +3145,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 263,
@@ -2892,6 +3157,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 264,
@@ -2903,6 +3169,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 265,
@@ -2914,6 +3181,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 266,
@@ -2925,6 +3193,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 267,
@@ -2936,6 +3205,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 268,
@@ -2947,6 +3217,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 269,
@@ -2958,6 +3229,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 270,
@@ -2969,6 +3241,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 271,
@@ -2980,6 +3253,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 272,
@@ -2991,6 +3265,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 273,
@@ -3002,6 +3277,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 274,
@@ -3013,6 +3289,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 275,
@@ -3024,6 +3301,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 276,
@@ -3035,6 +3313,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 277,
@@ -3046,6 +3325,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 278,
@@ -3057,6 +3337,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 279,
@@ -3068,6 +3349,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 280,
@@ -3079,6 +3361,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 281,
@@ -3090,6 +3373,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 282,
@@ -3101,6 +3385,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 283,
@@ -3112,6 +3397,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 284,
@@ -3123,6 +3409,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 285,
@@ -3134,6 +3421,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 286,
@@ -3145,6 +3433,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 287,
@@ -3156,6 +3445,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 288,
@@ -3167,6 +3457,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 289,
@@ -3178,6 +3469,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 290,
@@ -3189,6 +3481,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 291,
@@ -3200,6 +3493,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 292,
@@ -3211,6 +3505,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 293,
@@ -3222,6 +3517,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 294,
@@ -3233,6 +3529,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 295,
@@ -3244,6 +3541,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 296,
@@ -3255,6 +3553,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 297,
@@ -3266,6 +3565,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 298,
@@ -3277,6 +3577,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 299,
@@ -3288,6 +3589,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 300,
@@ -3299,7 +3601,10 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+
+  // /////////////////////////////////////////
   {
     id: 301,
     nama: "Kasa Pemb. 4 m x 5 Cm",
@@ -3310,6 +3615,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 302,
@@ -3321,6 +3627,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 303,
@@ -3332,6 +3639,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 304,
@@ -3343,6 +3651,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 305,
@@ -3354,6 +3663,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 306,
@@ -3365,6 +3675,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 307,
@@ -3376,6 +3687,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 308,
@@ -3387,6 +3699,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 309,
@@ -3398,6 +3711,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 310,
@@ -3409,6 +3723,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 311,
@@ -3420,6 +3735,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 312,
@@ -3431,6 +3747,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 313,
@@ -3442,6 +3759,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 314,
@@ -3453,6 +3771,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 315,
@@ -3464,6 +3783,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 316,
@@ -3475,6 +3795,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 317,
@@ -3486,6 +3807,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 318,
@@ -3497,6 +3819,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 319,
@@ -3508,6 +3831,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 320,
@@ -3519,6 +3843,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 321,
@@ -3530,6 +3855,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 322,
@@ -3541,6 +3867,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 323,
@@ -3552,6 +3879,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 324,
@@ -3563,6 +3891,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 325,
@@ -3574,6 +3903,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 326,
@@ -3585,6 +3915,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 327,
@@ -3596,6 +3927,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 328,
@@ -3607,6 +3939,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 329,
@@ -3618,6 +3951,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 330,
@@ -3629,6 +3963,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 331,
@@ -3640,6 +3975,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 332,
@@ -3651,6 +3987,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 333,
@@ -3662,6 +3999,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 334,
@@ -3673,6 +4011,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 335,
@@ -3684,6 +4023,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 336,
@@ -3695,6 +4035,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 337,
@@ -3706,6 +4047,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 338,
@@ -3717,6 +4059,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 339,
@@ -3728,6 +4071,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 340,
@@ -3739,6 +4083,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 341,
@@ -3750,6 +4095,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 342,
@@ -3761,6 +4107,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 343,
@@ -3772,6 +4119,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 344,
@@ -3783,6 +4131,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 345,
@@ -3794,6 +4143,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 346,
@@ -3805,6 +4155,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 347,
@@ -3816,6 +4167,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 348,
@@ -3827,6 +4179,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 349,
@@ -3838,6 +4191,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 350,
@@ -3849,7 +4203,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  // ///////////////////terakhir disini/////
   {
     id: 351,
     nama: "Ultrasonic Gell",
@@ -3860,6 +4216,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 352,
@@ -3871,6 +4228,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 353,
@@ -3882,6 +4240,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 354,
@@ -3893,6 +4252,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 355,
@@ -3904,6 +4264,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 356,
@@ -3915,6 +4276,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 357,
@@ -3926,6 +4288,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 358,
@@ -3937,6 +4300,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 359,
@@ -3948,6 +4312,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 360,
@@ -3959,6 +4324,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 361,
@@ -3970,6 +4336,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 362,
@@ -3981,6 +4348,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 363,
@@ -3992,6 +4360,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 364,
@@ -4003,6 +4372,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 365,
@@ -4014,6 +4384,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 366,
@@ -4025,6 +4396,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 367,
@@ -4036,6 +4408,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 368,
@@ -4047,6 +4420,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 369,
@@ -4058,6 +4432,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 370,
@@ -4069,6 +4444,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 371,
@@ -4080,6 +4456,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 372,
@@ -4091,6 +4468,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 373,
@@ -4102,6 +4480,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 374,
@@ -4113,6 +4492,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 375,
@@ -4124,6 +4504,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 376,
@@ -4135,6 +4516,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 377,
@@ -4146,6 +4528,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 378,
@@ -4157,6 +4540,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 379,
@@ -4168,6 +4552,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 380,
@@ -4179,6 +4564,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 381,
@@ -4190,6 +4576,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 382,
@@ -4201,6 +4588,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 383,
@@ -4212,6 +4600,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 384,
@@ -4223,6 +4612,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 385,
@@ -4234,6 +4624,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 386,
@@ -4245,6 +4636,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 387,
@@ -4256,6 +4648,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 388,
@@ -4267,6 +4660,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 389,
@@ -4278,6 +4672,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 390,
@@ -4289,6 +4684,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 391,
@@ -4300,6 +4696,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 392,
@@ -4311,6 +4708,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 393,
@@ -4322,6 +4720,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 394,
@@ -4333,6 +4732,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 395,
@@ -4344,6 +4744,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 2,
   },
   {
     id: 396,
@@ -4355,6 +4756,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 397,
@@ -4366,6 +4768,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 398,
@@ -4377,6 +4780,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 399,
@@ -4388,6 +4792,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 400,
@@ -4399,7 +4804,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  // //////////////////////////////////////
   {
     id: 401,
     nama: "Probe Cleanser",
@@ -4410,6 +4817,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 402,
@@ -4421,6 +4829,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 403,
@@ -4432,6 +4841,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 404,
@@ -4443,6 +4853,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 405,
@@ -4454,6 +4865,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 406,
@@ -4465,6 +4877,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 407,
@@ -4476,6 +4889,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 408,
@@ -4487,6 +4901,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 409,
@@ -4498,6 +4913,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 410,
@@ -4509,6 +4925,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 411,
@@ -4520,6 +4937,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 412,
@@ -4531,6 +4949,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 413,
@@ -4542,6 +4961,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 414,
@@ -4553,6 +4973,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 415,
@@ -4564,6 +4985,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 416,
@@ -4575,6 +4997,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 417,
@@ -4586,6 +5009,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 418,
@@ -4597,6 +5021,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 419,
@@ -4608,6 +5033,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 420,
@@ -4619,6 +5045,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 421,
@@ -4630,6 +5057,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 422,
@@ -4641,6 +5069,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 423,
@@ -4652,6 +5081,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 424,
@@ -4663,6 +5093,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 425,
@@ -4674,6 +5105,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 426,
@@ -4685,6 +5117,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 427,
@@ -4696,6 +5129,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 428,
@@ -4707,6 +5141,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 429,
@@ -4718,6 +5153,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 430,
@@ -4729,6 +5165,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 431,
@@ -4740,6 +5177,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 432,
@@ -4751,6 +5189,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 433,
@@ -4762,6 +5201,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 434,
@@ -4773,6 +5213,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 435,
@@ -4784,6 +5225,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 436,
@@ -4795,6 +5237,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 437,
@@ -4806,6 +5249,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 438,
@@ -4817,6 +5261,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 439,
@@ -4828,6 +5273,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 440,
@@ -4839,6 +5285,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 441,
@@ -4850,6 +5297,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 442,
@@ -4861,6 +5309,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 443,
@@ -4872,6 +5321,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 444,
@@ -4883,6 +5333,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 445,
@@ -4894,6 +5345,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 446,
@@ -4905,6 +5357,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 447,
@@ -4916,6 +5369,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 448,
@@ -4927,6 +5381,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 449,
@@ -4938,6 +5393,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 450,
@@ -4949,7 +5405,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  //  ///////////////////////////////
   {
     id: 451,
     nama: "Insektisida DBD",
@@ -4960,6 +5418,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 452,
@@ -4971,6 +5430,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 453,
@@ -4982,6 +5442,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 454,
@@ -4993,6 +5454,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 455,
@@ -5004,6 +5466,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 456,
@@ -5015,6 +5478,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 457,
@@ -5026,6 +5490,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 458,
@@ -5037,6 +5502,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 459,
@@ -5048,6 +5514,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 460,
@@ -5059,6 +5526,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 461,
@@ -5070,6 +5538,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 462,
@@ -5081,6 +5550,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 463,
@@ -5092,6 +5562,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 464,
@@ -5103,6 +5574,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 465,
@@ -5114,6 +5586,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 466,
@@ -5125,6 +5598,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 467,
@@ -5136,6 +5610,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 468,
@@ -5147,6 +5622,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 469,
@@ -5158,6 +5634,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 470,
@@ -5169,6 +5646,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 471,
@@ -5180,6 +5658,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 472,
@@ -5191,6 +5670,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 473,
@@ -5202,6 +5682,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 474,
@@ -5213,6 +5694,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 475,
@@ -5224,6 +5706,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 476,
@@ -5235,6 +5718,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 477,
@@ -5246,6 +5730,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 478,
@@ -5257,6 +5742,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 479,
@@ -5268,6 +5754,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 480,
@@ -5279,6 +5766,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 481,
@@ -5290,6 +5778,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 482,
@@ -5301,6 +5790,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 483,
@@ -5312,6 +5802,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 484,
@@ -5323,6 +5814,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 485,
@@ -5334,6 +5826,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 486,
@@ -5345,6 +5838,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 487,
@@ -5356,6 +5850,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 488,
@@ -5367,6 +5862,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 489,
@@ -5378,6 +5874,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 490,
@@ -5389,6 +5886,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 491,
@@ -5400,6 +5898,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 492,
@@ -5411,6 +5910,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 493,
@@ -5422,6 +5922,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 494,
@@ -5433,6 +5934,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 495,
@@ -5444,6 +5946,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 496,
@@ -5455,6 +5958,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 497,
@@ -5466,6 +5970,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 498,
@@ -5477,6 +5982,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 499,
@@ -5488,6 +5994,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 500,
@@ -5499,7 +6006,9 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
+  // /////////////////////////
   {
     id: 501,
     nama: "RDT DBD NS 1 (APBD)",
@@ -5510,6 +6019,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 502,
@@ -5521,6 +6031,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 503,
@@ -5532,6 +6043,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 504,
@@ -5543,6 +6055,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 505,
@@ -5554,6 +6067,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 506,
@@ -5565,6 +6079,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 507,
@@ -5576,6 +6091,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 508,
@@ -5587,6 +6103,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 509,
@@ -5598,6 +6115,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 510,
@@ -5609,6 +6127,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 511,
@@ -5620,6 +6139,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 512,
@@ -5631,6 +6151,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 513,
@@ -5642,6 +6163,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 514,
@@ -5653,6 +6175,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 515,
@@ -5664,6 +6187,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 516,
@@ -5675,6 +6199,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 517,
@@ -5686,6 +6211,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 518,
@@ -5697,6 +6223,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 519,
@@ -5708,6 +6235,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 520,
@@ -5719,6 +6247,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 521,
@@ -5730,6 +6259,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 522,
@@ -5741,6 +6271,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 523,
@@ -5752,6 +6283,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 524,
@@ -5763,6 +6295,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 525,
@@ -5774,6 +6307,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 526,
@@ -5785,6 +6319,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 527,
@@ -5796,6 +6331,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 528,
@@ -5807,6 +6343,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 529,
@@ -5818,6 +6355,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 530,
@@ -5829,6 +6367,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 531,
@@ -5840,6 +6379,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 532,
@@ -5851,6 +6391,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 533,
@@ -5862,6 +6403,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 534,
@@ -5873,6 +6415,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 535,
@@ -5884,6 +6427,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 536,
@@ -5895,6 +6439,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 537,
@@ -5906,6 +6451,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 538,
@@ -5917,6 +6463,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 539,
@@ -5928,6 +6475,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 540,
@@ -5939,6 +6487,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 3,
   },
   {
     id: 541,
@@ -5950,6 +6499,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 542,
@@ -5961,6 +6511,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 543,
@@ -5972,6 +6523,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 544,
@@ -5983,6 +6535,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 545,
@@ -5994,6 +6547,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 546,
@@ -6005,6 +6559,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 547,
@@ -6016,6 +6571,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 548,
@@ -6027,6 +6583,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 549,
@@ -6038,6 +6595,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 550,
@@ -6049,10 +6607,528 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  //  /////////////////////
   {
     id: 551,
-    nama: "Tetagam",
+    nama: "RDT DBD NS 1 (APBD)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 552,
+    nama: "RDT DBD NS 1 (Prog. Provinsi)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 553,
+    nama: "RDT HBSAg",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 554,
+    nama: "RDT HBsAg (Virocheck)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 555,
+    nama: "RDT HCV (Prog. Prov)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 556,
+    nama: "RDT HIV (Diagnostar HIV 1/2)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 557,
+    nama: "RDT HIV (HIV 1/2 TEST WB/S/P)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 558,
+    nama: "RDT HIV (One Step HIV 1/2)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 559,
+    nama: "RDT HIV (SD BIOLINE HIV 1/2 3.0) DAK",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 560,
+    nama: "RDT HIV (Standard Q HIV 1/2 Ab)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 561,
+    nama: "RDT HIV (Virocheck HIV 1/2)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 562,
+    nama: "RDT HIV (Virocheck HIV 1/2) DAK",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 563,
+    nama: "RDT HIV (Virocheck HIV 1/2) Prog. Prov",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 564,
+    nama: "RDT HIV 1/2 & SYPHILIS COMBO",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 565,
+    nama: "RDT Leptospirosis",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 566,
+    nama: "RDT Malaria",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 567,
+    nama: "RDT MALARIA (APBD)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 568,
+    nama: "RDT Syphilis (APBD)",
+    kelasTerapiId: 1,
+    satuanId: 10,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 569,
+    nama: "RDT Syphilis (Trepocheck)",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 570,
+    nama: "RDT Syphilis (Trepocheck) DAK",
+    kelasTerapiId: 1,
+    satuanId: 6,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 571,
+    nama: "Reagen Ziehl Neelsen",
+    kelasTerapiId: 1,
+    satuanId: 7,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 572,
+    nama: "Respiratory Rate Timer",
+    kelasTerapiId: 1,
+    satuanId: 7,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 573,
+    nama: "Rifampicin 75mg & Isoniazid 50mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 574,
+    nama: "Rifepentine 150 mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 575,
+    nama: "Rompi Kusta",
+    kelasTerapiId: 1,
+    satuanId: 7,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 576,
+    nama: "Safety Box 5 L Vaksin",
+    kelasTerapiId: 1,
+    satuanId: 2,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 577,
+    nama: "Spraycan Malaria",
+    kelasTerapiId: 1,
+    satuanId: 3,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 578,
+    nama: "Sputum Box Sterofoam 5 L",
+    kelasTerapiId: 1,
+    satuanId: 7,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 579,
+    nama: "Tablet Tambah Darah",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 580,
+    nama: "Tas Kit Jumantik",
+    kelasTerapiId: 1,
+    satuanId: 7,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 581,
+    nama: "TDF 300 mg + 3TC 300 mg + EFV 600 mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 582,
+    nama: "Tenofovir 300 mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 583,
+    nama: "Triple TLD FDC",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 584,
+    nama: "Tuberkulin",
+    kelasTerapiId: 1,
+    satuanId: 8,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 585,
+    nama: "Vit A 100.000 IU (Prog. Prov)",
+    kelasTerapiId: 1,
+    satuanId: 9,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 586,
+    nama: "Vit A 200.000 IU (Prog. Prov)",
+    kelasTerapiId: 1,
+    satuanId: 9,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 587,
+    nama: "Vit B6 25 mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 588,
+    nama: "Vit K Inj (Prog. Provinsi)",
+    kelasTerapiId: 1,
+    satuanId: 5,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 589,
+    nama: "Zidovudine 100mg",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 590,
+    nama: "Zinc",
+    kelasTerapiId: 1,
+    satuanId: 1,
+    profileId: 1,
+    kategoriId: 7,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 3,
+  },
+  {
+    id: 591,
+    nama: "Alat Suntik 0,05 ml",
+    kelasTerapiId: 1,
+    satuanId: 7, // Picis
+    profileId: 1,
+    kategoriId: 9,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 1,
+  },
+  {
+    id: 592,
+    nama: "Alat Suntik 0,5 ml",
+    kelasTerapiId: 1,
+    satuanId: 7, // Picis
+    profileId: 1,
+    kategoriId: 9,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 1,
+  },
+  {
+    id: 593,
+    nama: "Alat Suntik 5 ml",
+    kelasTerapiId: 1,
+    satuanId: 7, // Picis
+    profileId: 1,
+    kategoriId: 9,
+    totalStok: 0,
+    createdAt: currentDate,
+    updatedAt: currentDate,
+    sumberDanaId: 1,
+  },
+  {
+    id: 594,
+    nama: "Hepatitis B Imune Globulin (Human)",
     kelasTerapiId: 1,
     satuanId: 17, // Box
     profileId: 1,
@@ -6060,546 +7136,81 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
-  },
-  {
-    id: 552,
-    nama: "Vaksin BCG 20 ds + Pelarut",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 553,
-    nama: "Vaksin DT",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 554,
-    nama: "Vaksin DPT HB HIB",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 555,
-    nama: "Vaksin Haji Meningitis",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 556,
-    nama: "Vaksin Hepatitis (Adult 1 mL)",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 557,
-    nama: "Vaksin Hepatitis B0 / Uniject",
-    kelasTerapiId: 1,
-    satuanId: 11, // Sachet
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 558,
-    nama: "Vaksin HPV",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 559,
-    nama: "Vaksin Jerap Td (Tetanus-Difteri Toksoid)",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 560,
-    nama: "Vaksin MR 10 ds + Pelarut",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 561,
-    nama: "Vaksin PCV 4 ds",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 562,
-    nama: "Vaksin Polio bOPV 10 ds + Dropper",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 563,
-    nama: "Vaksin Polio IPV ds 5",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 564,
-    nama: "Vaksin Rabies",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 565,
-    nama: "Vaksin Rotavac ds. 5",
-    kelasTerapiId: 1,
-    satuanId: 6, // Vial
-    profileId: 1,
-    kategoriId: 9,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 566,
-    nama: "Codein 10 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 567,
-    nama: "Pethidin Inj 50 mg/mL",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 568,
-    nama: "Alprazolam 0,5 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 569,
-    nama: "Clobazam 10 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 570,
-    nama: "Diazepam 2 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 571,
-    nama: "Diazepam 5 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 572,
-    nama: "Diazepam 5 mg (Prog. Prov)",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 573,
-    nama: "Diazepam Inj. 5 mg/mL",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 574,
-    nama: "Diazepam Inj. 5mg/ml (Prog. Provinsi)",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 575,
-    nama: "Phenobarbital 30 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 576,
-    nama: "Phenobarbital 30 mg",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 577,
-    nama: "Phenobarbital Inj. 50 mg/ml (Prog. Prov)",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 578,
-    nama: "Stesolid Rectal 5mg/2,5 mL",
-    kelasTerapiId: 1,
-    satuanId: 12, // Tube
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 579,
-    nama: "Stesolid Rectal 10mg/2,5 mL",
-    kelasTerapiId: 1,
-    satuanId: 12, // Tube
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 580,
-    nama: "Amitriptyline 25 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 581,
-    nama: "Carbamazepine 200 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 582,
-    nama: "Chlorpromazine 100 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 583,
-    nama: "Chlorpromazine 25 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 584,
-    nama: "Chlorpromazine Inj 25 mg/mL",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 585,
-    nama: "Chlorpromazine Inj 5 mg/mL",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 586,
-    nama: "Clozapine 100 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 587,
-    nama: "Clozapine 25 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 588,
-    nama: "Clozapine 25 mg (Prog. Provinsi)",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 589,
-    nama: "Fluphenazine Inj. 25mg/mL",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 590,
-    nama: "Fluphenazine Inj. 25mg/mL (Prog. Provinsi)",
-    kelasTerapiId: 1,
-    satuanId: 5, // Ampul
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 591,
-    nama: "Haloperidol 0,5 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 592,
-    nama: "Haloperidol 1,5 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 593,
-    nama: "Haloperidol 5 mg",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 594,
-    nama: "Haloperidol 5 mg (Prog. Provinsi)",
-    kelasTerapiId: 1,
-    satuanId: 1, // Tablet
-    profileId: 1,
-    kategoriId: 6,
-    totalStok: 0,
-    createdAt: currentDate,
-    updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 595,
-    nama: "Haloperidol Inj. 5 mg/mL",
+    nama: "KARTU IMUNISASI HEPATITIS B",
     kelasTerapiId: 1,
-    satuanId: 5, // Ampul
+    satuanId: 7, // Picis
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 596,
-    nama: "Risperidon 2 mg",
+    nama: "Pelarut & Jarum (Rabivax Set)",
     kelasTerapiId: 1,
-    satuanId: 1, // Tablet
+    satuanId: 7, // Picis
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 597,
-    nama: "Risperidon 2 mg (Prog. Provinsi)",
+    nama: "Rabies Immunune Globulin 2 mg (Human)",
     kelasTerapiId: 1,
-    satuanId: 1, // Tablet
+    satuanId: 17, // Box
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 598,
-    nama: "Tramadol Inj",
+    nama: "Safety Box 2,5 L",
     kelasTerapiId: 1,
-    satuanId: 5, // Ampul
+    satuanId: 15, // Lembar
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 599,
-    nama: "Trifluoperazine",
+    nama: "Safety Box 5 L",
     kelasTerapiId: 1,
-    satuanId: 1, // Tablet
+    satuanId: 15, // Lembar
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 600,
-    nama: "Trihexyphenidyl 2 mg",
+    nama: "Serum Anti Bisa Ular 5 mg",
     kelasTerapiId: 1,
-    satuanId: 1, // Tablet
+    satuanId: 5, // Ampul
     profileId: 1,
-    kategoriId: 6,
+    kategoriId: 9,
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
+  //  //////////////////////
   {
     id: 601,
     nama: "KOMBINASI Lamivudine 150 mg + Zidovudine 300mg",
@@ -6610,6 +7221,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 602,
@@ -6621,6 +7233,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 603,
@@ -6632,6 +7245,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 604,
@@ -6643,6 +7257,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 605,
@@ -6654,6 +7269,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 606,
@@ -6665,6 +7281,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 607,
@@ -6676,6 +7293,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 608,
@@ -6687,6 +7305,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 609,
@@ -6698,6 +7317,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 610,
@@ -6709,6 +7329,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 611,
@@ -6720,6 +7341,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 612,
@@ -6731,6 +7353,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 613,
@@ -6742,6 +7365,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 614,
@@ -6753,6 +7377,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 615,
@@ -6764,6 +7389,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 616,
@@ -6775,6 +7401,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 617,
@@ -6786,6 +7413,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 618,
@@ -6797,6 +7425,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 619,
@@ -6808,6 +7437,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 620,
@@ -6819,6 +7449,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 621,
@@ -6830,6 +7461,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 622,
@@ -6841,6 +7473,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 623,
@@ -6852,6 +7485,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 624,
@@ -6863,6 +7497,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 625,
@@ -6874,6 +7509,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 626,
@@ -6885,6 +7521,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 627,
@@ -6896,6 +7533,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 628,
@@ -6907,6 +7545,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 629,
@@ -6918,6 +7557,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 630,
@@ -6929,6 +7569,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 631,
@@ -6940,6 +7581,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 632,
@@ -6951,6 +7593,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 633,
@@ -6962,6 +7605,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 634,
@@ -6973,6 +7617,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 635,
@@ -6984,6 +7629,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 636,
@@ -6995,6 +7641,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 637,
@@ -7006,6 +7653,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 638,
@@ -7017,6 +7665,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 639,
@@ -7028,6 +7677,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 640,
@@ -7039,6 +7689,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 641,
@@ -7050,6 +7701,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
   {
     id: 642,
@@ -7061,6 +7713,7 @@ const obats = [
     totalStok: 0,
     createdAt: currentDate,
     updatedAt: currentDate,
+    sumberDanaId: 1,
   },
 ];
 

@@ -50,6 +50,10 @@ module.exports = {
             attributes: ["id", "nama"],
           },
           {
+            model: sumberDana,
+            attributes: ["id", "sumber"],
+          },
+          {
             model: noBatch,
             attributes: ["id", "harga", "noBatch", "stok"],
 
@@ -150,6 +154,7 @@ module.exports = {
 
         return {
           nama: obat.nama,
+          sumberDana: obat.sumberDana,
           totalStok: obat.totalStok,
           penerimaan,
           pemakaian,

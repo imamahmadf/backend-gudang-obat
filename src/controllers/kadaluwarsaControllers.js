@@ -2,6 +2,7 @@ const { db, dbquery } = require("../database");
 const {
   amprahan,
   amprahanItem,
+  perusahaan,
   noBatch,
   uptd,
   obat,
@@ -12,10 +13,14 @@ const { Op } = require("sequelize");
 module.exports = {
   getKadaluwarsa: async (req, res) => {
     try {
+      console.log(req.query, "INI DRI FE");
+      const page = parseInt(req.query.page) || 0;
+      const limit = parseInt(req.query.limit) || 5;
+      const offset = limit * page;
       const sixMonthsFromNow = new Date();
       sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
 
-      const result = await obat.findAll({
+      const result = await obat.findAndCountAll({
         include: [
           {
             model: noBatch,
@@ -33,9 +38,13 @@ module.exports = {
             ],
           },
         ],
+        order: [[{ model: noBatch }, "exp", "ASC"]],
       });
-
-      return res.status(200).send({ result });
+      const totalRows = result.count;
+      const totalPage = Math.ceil(totalRows / limit);
+      return res
+        .status(200)
+        .send({ result, page, limit, totalRows, totalPage });
     } catch (err) {
       return res.status(500).json({
         message: err.toString(),

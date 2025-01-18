@@ -12,6 +12,7 @@ const rusakRouters = require("./rusakRoutes");
 const kadaluwarsaRoutes = require("./kadaluwarsaRoutes");
 const puskesmasRouters = require("./puskesmasRouters");
 const laporanRouters = require("./laporanRouters");
+const adminRouters = require("./adminRouters");
 module.exports = {
   obatRoutes,
   noBatchRoutes,
@@ -27,4 +28,5 @@ module.exports = {
   kadaluwarsaRoutes,
   puskesmasRouters,
   laporanRouters,
+  adminRouters,
 };

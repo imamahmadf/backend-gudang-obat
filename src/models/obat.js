@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.kategori);
       this.belongsTo(models.kelasterapi);
       this.belongsTo(models.profile);
+      this.belongsTo(models.sumberDana);
     }
   }
   obat.init(
@@ -24,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       satuanId: DataTypes.INTEGER,
       profileId: DataTypes.INTEGER,
       kategoriId: DataTypes.INTEGER,
+      sumberDanaId: DataTypes.INTEGER,
       totalStok: DataTypes.INTEGER,
+      aplikasiId: DataTypes.INTEGER,
     },
     {
       sequelize,

@@ -26,7 +26,13 @@ module.exports = {
       kategoriId: {
         type: Sequelize.INTEGER,
       },
+      sumberDanaId: {
+        type: Sequelize.INTEGER,
+      },
       totalStok: {
+        type: Sequelize.INTEGER,
+      },
+      aplikasiId: {
         type: Sequelize.INTEGER,
       },
       createdAt: {

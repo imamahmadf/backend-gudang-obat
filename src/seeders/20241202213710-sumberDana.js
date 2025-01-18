@@ -4,19 +4,19 @@ const currentDate = new Date();
 const sumberDanas = [
   {
     id: 1,
-    sumber: "APBN",
-    createdAt: currentDate,
-    updatedAt: currentDate,
-  },
-  {
-    id: 2,
     sumber: "APBD",
     createdAt: currentDate,
     updatedAt: currentDate,
   },
   {
+    id: 2,
+    sumber: "Buffer",
+    createdAt: currentDate,
+    updatedAt: currentDate,
+  },
+  {
     id: 3,
-    sumber: "Provinsi",
+    sumber: "Program",
     createdAt: currentDate,
     updatedAt: currentDate,
   },

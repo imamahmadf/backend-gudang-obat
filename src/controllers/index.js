@@ -12,7 +12,7 @@ const rusakControllers = require("./rusakControllers");
 const kadaluwarsaControllers = require("./kadaluwarsaControllers");
 const puskesmasControllers = require("./puskesmasControllers");
 const laporanControllers = require("./laporanControllers");
-
+const adminControllers = require("./adminControllers");
 module.exports = {
   obatControllers,
   noBatchControllers,
@@ -28,4 +28,5 @@ module.exports = {
   kadaluwarsaControllers,
   puskesmasControllers,
   laporanControllers,
+  adminControllers,
 };

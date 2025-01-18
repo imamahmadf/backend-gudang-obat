@@ -55,9 +55,18 @@ module.exports = {
   },
 
   tolak: async (req, res) => {
-    const { id } = req.body;
+    const { id, old_img } = req.body;
     console.log(req.body, "DDDDDDDD");
     try {
+      if (old_img) {
+        const path = `${__dirname}/../public${old_img}`;
+        fs.unlink(path, (err) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+        });
+      }
       const result = await noBatch.update(
         {
           status: 2,

@@ -30,9 +30,7 @@ module.exports = {
       perusahaanId: {
         type: Sequelize.INTEGER,
       },
-      sumberDanaId: {
-        type: Sequelize.INTEGER,
-      },
+
       pic: {
         type: Sequelize.STRING,
       },
