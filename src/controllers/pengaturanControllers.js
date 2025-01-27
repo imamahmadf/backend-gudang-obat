@@ -7,6 +7,7 @@ const {
   kategori,
   uptd,
   perusahaan,
+  aplikasi,
 } = require("../models");
 const { Op } = require("sequelize");
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
       const kategoriSeed = await kategori.findAll();
       const kelasterapiSeed = await kelasterapi.findAll();
       const sumberDanaSeed = await sumberDana.findAll();
+      const aplikasiSeed = await aplikasi.findAll();
       const uptdSeed = await uptd.findAll({
         where: {
           statusTujuanId: 1,
@@ -36,6 +38,7 @@ module.exports = {
         kelasterapiSeed,
         uptdSeed,
         perusahaanSeed,
+        aplikasiSeed,
       });
     } catch (err) {
       return res.status(500).json({
@@ -52,6 +55,25 @@ module.exports = {
       });
       return res.status(200).send({
         newSatuan,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        message: err.toString(),
+        code: 500,
+      });
+    }
+  },
+
+  postAplikasi: async (req, res) => {
+    console.log(req.body);
+    const { nama, warna } = req.body;
+    try {
+      const newAplikasi = await aplikasi.create({
+        nama,
+        warna,
+      });
+      return res.status(200).send({
+        newAplikasi,
       });
     } catch (err) {
       return res.status(500).json({

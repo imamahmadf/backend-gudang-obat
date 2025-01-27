@@ -183,6 +183,7 @@ module.exports = {
         include: [
           {
             model: amprahan,
+            required: true,
             include: [
               {
                 model: uptd,
@@ -191,6 +192,7 @@ module.exports = {
               {
                 model: amprahanItem,
                 attributes: ["permintaan", "sisa"],
+                required: true,
 
                 include: [
                   {

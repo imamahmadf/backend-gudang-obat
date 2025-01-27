@@ -34,7 +34,7 @@ module.exports = {
       const satuanId = parseInt(req.query.satuanId);
       const profileId = parseInt(req.query.profileId);
       const kategoriId = parseInt(req.query.kategoriId);
-      // const sumberDanaId = parseInt(req.query.sumberDanaId);
+      const sumberDanaId = parseInt(req.query.sumberDanaId);
       const profileReudxId = parseInt(req.query.profileReduxId);
       // console.log(req.file.filename, "filenama tes123");
       console.log(req.query, "TES OBAT");
@@ -46,6 +46,7 @@ module.exports = {
           satuanId,
           profileId,
           kategoriId,
+          sumberDanaId,
           totalStok: 0,
         },
         { transaction }
@@ -108,6 +109,7 @@ module.exports = {
     const kelasTerapiId = parseInt(req.query.kelasTerapiId);
     const kategoriId = parseInt(req.query.kategoriId);
     const satuanId = parseInt(req.query.satuanId);
+    const aplikasiId = parseInt(req.query.aplikasiId);
     const offset = limit * page;
     console.log(req.query);
 
@@ -125,6 +127,10 @@ module.exports = {
 
     if (satuanId) {
       whereCondition.satuanId = satuanId;
+    }
+
+    if (aplikasiId) {
+      whereCondition.aplikasiId = aplikasiId;
     }
 
     try {
@@ -146,6 +152,10 @@ module.exports = {
           {
             model: kelasterapi,
             attributes: ["nama"],
+          },
+          {
+            model: aplikasi,
+            attributes: ["nama", "warna"],
           },
           {
             model: satuan,
@@ -193,6 +203,7 @@ module.exports = {
         totalAset += jumlah;
         jumlah = 0;
       });
+      const perhitunganItem = await obat.findAll({});
 
       res.status(200).send({
         result,
@@ -201,6 +212,7 @@ module.exports = {
         totalRows,
         totalPage,
         totalAset,
+        totalItem: perhitunganItem.length,
       });
     } catch (err) {
       console.log(err);
@@ -424,6 +436,10 @@ module.exports = {
               attributes: ["nama", "id"],
             },
             {
+              model: aplikasi,
+              attributes: ["nama", "id"],
+            },
+            {
               model: noBatch,
               attributes: [
                 "noBatch",
@@ -631,8 +647,16 @@ module.exports = {
 
   patchObat: async (req, res) => {
     const transaction = await sequelize.transaction();
-    const { nama, kelasterapiFE, satuanFE, kategoriFE, id, profileId, kode } =
-      req.body;
+    const {
+      nama,
+      kelasterapiFE,
+      satuanFE,
+      kategoriFE,
+      id,
+      profileId,
+      kode,
+      aplikasiFE,
+    } = req.body;
 
     console.log(req.body, "DATA EDIT OBAT!!!!");
 
@@ -644,6 +668,7 @@ module.exports = {
           kelasTerapiId: parseInt(kelasterapiFE.id),
           satuanId: parseInt(satuanFE.id),
           kategoriId: parseInt(kategoriFE.id),
+          aplikasiId: parseInt(aplikasiFE.id),
         },
         {
           where: {
@@ -671,6 +696,10 @@ module.exports = {
               model: satuan,
               attributes: ["nama", "id"],
             },
+            {
+              model: aplikasi,
+              attributes: ["nama", "id"],
+            },
           ],
         },
         { transaction }
@@ -684,6 +713,8 @@ module.exports = {
         riwayatFE = `kelas terapi ${kelasterapiFE.nama} diubah menjadi ${getUpdateRiwayat.kelasterapi.nama}`;
       } else if (kode === "nama") {
         riwayatFE = `nama Obat diubah menjadi ${getUpdateRiwayat.nama}`;
+      } else if (kode === "aplikasi") {
+        riwayatFE = `Aplikasi diubah menjadi ${getUpdateRiwayat.aplikasi.nama}`;
       }
 
       const tambahRiwayat = await riwayat.create({

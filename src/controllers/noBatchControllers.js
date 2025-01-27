@@ -67,16 +67,11 @@ module.exports = {
           }
         });
       }
-      const result = await noBatch.update(
-        {
-          status: 2,
+      const result = await noBatch.destroy({
+        where: {
+          id,
         },
-        {
-          where: {
-            id,
-          },
-        }
-      );
+      });
       return res.status(200).json({
         message: "tolak no batch",
       });
