@@ -4,12 +4,12 @@ const constraintName = "fk-obat-aplikasi";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
+    // Menambahkan constraint foreign key
     await queryInterface.addConstraint("obats", {
       fields: ["aplikasiId"],
       type: "foreign key",
       name: constraintName,
       references: {
-        //Required field
         table: "aplikasis",
         field: "id",
       },
@@ -19,6 +19,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
+    // Menghapus constraint jika ada
     await queryInterface.removeConstraint("obats", constraintName);
   },
 };

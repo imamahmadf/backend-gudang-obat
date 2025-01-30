@@ -134,18 +134,21 @@ module.exports = {
       const limit = parseInt(req.query.limit) || 5;
       const time = req.query.time || "ASC";
       const offset = limit * page;
-      const whereCondition = {};
+
       const statusAmprahanId = parseInt(req.query.jenis);
+
+      const whereCondition = {};
       console.log(statusAmprahanId, "STATUS AMPRAHAN");
-      if (req.query?.startDate) {
-        whereCondition.startDate = {
-          [Op.gt]: startDate,
+
+      if (statusAmprahanId) {
+        whereCondition.StatusAmprahanId = {
+          [Op.eq]: statusAmprahanId,
         };
       }
 
-      if (req.query?.endDate) {
-        whereCondition.endDate = {
-          [Op.lt]: endDate,
+      if (startDate && endDate) {
+        whereCondition.tanggal = {
+          [Op.between]: [startDate, endDate],
         };
       }
 
@@ -162,9 +165,7 @@ module.exports = {
         offset,
 
         limit,
-        where: {
-          statusAmprahanId,
-        },
+        where: whereCondition,
       });
       const totalRows = result.count;
       const totalPage = Math.ceil(totalRows / limit);

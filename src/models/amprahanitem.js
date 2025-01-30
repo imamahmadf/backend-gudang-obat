@@ -20,11 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       permintaan: DataTypes.INTEGER,
       sisa: DataTypes.INTEGER,
       catatan: DataTypes.STRING,
+      deletedAt: DataTypes.DATE,
     },
-    {
-      sequelize,
-      modelName: "amprahanItem",
-    }
+    { paranoid: true, sequelize, modelName: "amprahanItem" }
   );
   return amprahanItem;
 };

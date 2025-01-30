@@ -13,6 +13,7 @@ const kadaluwarsaRoutes = require("./kadaluwarsaRoutes");
 const puskesmasRouters = require("./puskesmasRouters");
 const laporanRouters = require("./laporanRouters");
 const adminRouters = require("./adminRouters");
+const statistikRouters = require("./statistikRouters");
 module.exports = {
   obatRoutes,
   noBatchRoutes,
@@ -29,4 +30,5 @@ module.exports = {
   puskesmasRouters,
   laporanRouters,
   adminRouters,
+  statistikRouters,
 };

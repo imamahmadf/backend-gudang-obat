@@ -24,11 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       pic: DataTypes.STRING,
       perusahaanId: DataTypes.INTEGER,
       kotak: DataTypes.INTEGER,
+      deletedAt: DataTypes.DATE,
     },
-    {
-      sequelize,
-      modelName: "noBatch",
-    }
+    { paranoid: true, sequelize, modelName: "noBatch" }
   );
   return noBatch;
 };
