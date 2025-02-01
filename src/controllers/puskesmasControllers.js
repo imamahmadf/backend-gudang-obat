@@ -10,9 +10,18 @@ const {
   StatusAmprahan,
 } = require("../models");
 const { Op } = require("sequelize");
+
 module.exports = {
   getPuskesmas: async (req, res) => {
     const { puskesmasId } = req.params;
+
+    // Validasi puskesmasId
+    if (isNaN(puskesmasId)) {
+      return res
+        .status(400)
+        .json({ message: "puskesmasId harus berupa angka." });
+    }
+
     const startDate = req.query.startDate;
     const endDate = req.query.endDate;
     const page = parseInt(req.query.page) || 0;

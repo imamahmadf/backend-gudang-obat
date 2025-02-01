@@ -39,7 +39,12 @@ module.exports = {
       const result = await amprahanItem.findAll({
         include: [
           { model: amprahan, where: { StatusAmprahanId: 7 } },
-          { model: noBatch, include: [{ model: obat, where: whereCondition }] },
+          {
+            model: noBatch,
+            required: true,
+            paranoid: false,
+            include: [{ model: obat, where: whereCondition }],
+          },
         ],
         offset: offset,
         limit: limit,

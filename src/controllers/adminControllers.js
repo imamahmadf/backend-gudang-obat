@@ -22,11 +22,13 @@ module.exports = {
       const obatId = req.params.obatId;
       console.log(obatId, "ADMIN");
       const result = await amprahanItem.findAll({
-        order: [["createdAt", "ASC"]],
+        order: [["createdAt", "DESC"]],
         include: [
           {
             model: noBatch,
             required: true,
+            paranoid: false,
+
             include: [
               {
                 model: obat,

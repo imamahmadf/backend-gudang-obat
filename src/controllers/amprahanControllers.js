@@ -204,6 +204,8 @@ module.exports = {
             include: [
               {
                 model: noBatch,
+                required: true,
+                paranoid: false,
                 include: [
                   {
                     model: obat,

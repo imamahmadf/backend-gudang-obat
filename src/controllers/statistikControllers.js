@@ -23,6 +23,7 @@ module.exports = {
           {
             model: noBatch,
             required: true,
+            paranoid: false,
             where: { status: 1 },
             include: [{ model: obat, required: true, where: { id: obatId } }],
           },
@@ -89,6 +90,8 @@ module.exports = {
         include: [
           {
             model: noBatch,
+            required: true,
+            paranoid: false,
             where: { status: 1 },
             include: [
               {

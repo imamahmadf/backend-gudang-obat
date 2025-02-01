@@ -56,6 +56,8 @@ module.exports = {
           {
             model: noBatch,
             attributes: ["id", "harga", "noBatch", "stok"],
+            required: true,
+            paranoid: false,
 
             include: [
               {

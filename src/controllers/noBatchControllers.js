@@ -4,7 +4,14 @@ const {
   sequelize,
   amprahanItem,
   amprahan,
+  perusahaan,
   obat,
+  satuan,
+  sumberDana,
+  aplikasi,
+
+  kategori,
+  kelasterapi,
 } = require("../models");
 const fs = require("fs");
 module.exports = {
@@ -276,6 +283,84 @@ module.exports = {
       });
     } catch (err) {
       await transaction.rollback();
+      console.log(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  getNol: async (req, res) => {
+    try {
+      const result = await noBatch.findAll({
+        where: {
+          stok: 0,
+          status: 1,
+        },
+        attributes: ["noBatch", "exp", "harga", "kotak", "pic", "id", "stok"],
+        include: [
+          {
+            model: obat,
+            attributes: ["nama"],
+            include: [
+              {
+                model: kategori,
+                attributes: ["nama"],
+              },
+              {
+                model: kelasterapi,
+                attributes: ["nama"],
+              },
+              {
+                model: aplikasi,
+                attributes: ["nama", "warna"],
+              },
+              {
+                model: satuan,
+                attributes: ["nama"],
+              },
+              { model: sumberDana, attributes: ["sumber"] },
+            ],
+          },
+          { model: perusahaan },
+        ],
+      });
+      return res.status(200).send({ result });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+  deleteAll: async (req, res) => {
+    const { old_img, id } = req.body;
+    console.log(req.body);
+    try {
+      if (old_img.length > 0) {
+        const deletePromises = old_img.map((pic) => {
+          const path = `${__dirname}/../public${pic}`;
+          return new Promise((resolve, reject) => {
+            fs.unlink(path, (err) => {
+              if (err) {
+                console.error(err);
+                reject(err);
+              } else {
+                resolve();
+              }
+            });
+          });
+        });
+        await Promise.all(deletePromises); // Tunggu semua penghapusan selesai
+      }
+      const result = await noBatch.destroy({
+        where: {
+          id, // Menghapus berdasarkan array ids
+        },
+      });
+      return res.status(200).json({
+        message: `${result} data berhasil dihapus`, // Mengembalikan jumlah data yang dihapus
+      });
+    } catch (err) {
       console.log(err);
       return res.status(500).json({
         message: err,

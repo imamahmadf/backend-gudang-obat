@@ -26,3 +26,6 @@ routers.patch(
   }).single("pic"),
   noBatchControllers.editNobatch
 );
+
+routers.get("/get/stok-nol", noBatchControllers.getNol);
+routers.post("/delete/stok-nol", noBatchControllers.deleteAll);
