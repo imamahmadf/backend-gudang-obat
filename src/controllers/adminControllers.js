@@ -97,7 +97,7 @@ module.exports = {
   },
   editAmprahanItem: async (req, res) => {
     const { id, sisa, permintaan } = req.body;
-    // console.log(req.body, "INI data dari admin fornt end");
+    // console.log(req.body, "INI data dari admin fornt end"); tes
     try {
       await amprahanItem.update(
         {
