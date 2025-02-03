@@ -33,7 +33,7 @@ const noBatches = [
 ];
 
 // Loop to generate the rest of the entries up to id 43
-for (let i = 3; i <= 642; i++) {
+for (let i = 3; i <= 637; i++) {
   noBatches.push({
     id: i,
     noBatch: "SO",
