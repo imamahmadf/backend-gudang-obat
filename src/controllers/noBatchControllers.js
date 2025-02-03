@@ -63,7 +63,7 @@ module.exports = {
 
   tolak: async (req, res) => {
     const { id, old_img } = req.body;
-    // console.log(req.body, "DDDDDDDD");
+    console.log(req.body, "DDDDDDDD TOLAKKK");
     try {
       if (old_img) {
         const path = `${__dirname}/../public${old_img}`;
@@ -78,6 +78,7 @@ module.exports = {
         where: {
           id,
         },
+        force: true,
       });
       return res.status(200).json({
         message: "tolak no batch",
