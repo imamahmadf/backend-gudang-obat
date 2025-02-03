@@ -18,7 +18,7 @@ module.exports = {
     try {
       const { puskesmasId, statusId } = req.query;
 
-      console.log(req.query);
+      // console.log(req.query);
       const result = await amprahan.create({
         uptdId: puskesmasId,
         tanggal: new Date(),
@@ -37,7 +37,7 @@ module.exports = {
     }
   },
   postAmprahanItem: async (req, res) => {
-    console.log(req.query, "CEK DATA UNTUK ALOKASI DAN AMPRAHAN");
+    // console.log(req.query, "CEK DATA UNTUK ALOKASI DAN AMPRAHAN");
     const transaction = await sequelize.transaction();
     try {
       const { noBatchId, userId, amprahanId, permintaan, stokAwal, obatId } =
@@ -126,7 +126,7 @@ module.exports = {
 
   getAllAmprahan: async (req, res) => {
     try {
-      console.log(req.query, "MASUK AMPRAHAN");
+      // console.log(req.query, "MASUK AMPRAHAN");
       const startDate = req.query.startDate;
       const endDate = req.query.endDate;
       const filter = req.query.filter;
@@ -138,7 +138,7 @@ module.exports = {
       const statusAmprahanId = parseInt(req.query.jenis);
 
       const whereCondition = {};
-      console.log(statusAmprahanId, "STATUS AMPRAHAN");
+      // console.log(statusAmprahanId, "STATUS AMPRAHAN");
 
       if (statusAmprahanId) {
         whereCondition.StatusAmprahanId = {
@@ -188,9 +188,9 @@ module.exports = {
     const id = req.params.amprahanId;
     const penanggungjawab = parseInt(req.query.penanggungjawab);
     const whereCondition = {};
-    console.log(penanggungjawab);
+    // console.log(penanggungjawab);
     if (penanggungjawab) {
-      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+      // console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
       whereCondition.profileId = penanggungjawab;
     }
     try {
@@ -284,7 +284,7 @@ module.exports = {
   },
 
   tutupAmprahan: async (req, res) => {
-    console.log(req.params.id, "TUTOPPPPPPPPPP");
+    // console.log(req.params.id, "TUTOPPPPPPPPPP");
     const id = req.params.id;
     try {
       const result = await amprahan.update({ isOpen: 0 }, { where: { id } });
@@ -307,7 +307,7 @@ module.exports = {
       stok,
       noBatchId,
     } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     const transaction = await sequelize.transaction();
     try {
       const editPermintaan = await amprahanItem.update(
@@ -408,7 +408,7 @@ module.exports = {
     const { obatId, stokEXP, perusahaanId, noBatchId, userId } = req.body;
     const expId = 25;
     const transaction = await sequelize.transaction();
-    console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    // console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     const tanggal = new Date();
     try {
       const buatAmprahan = await amprahan.create(

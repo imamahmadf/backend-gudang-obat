@@ -3,7 +3,7 @@ const constraintName = "fk-noBatch-perusahaan";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.addConstraint("nobatches", {
+    await queryInterface.addConstraint("noBatches", {
       fields: ["perusahaanId"],
       type: "foreign key",
       name: constraintName,
@@ -18,6 +18,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeConstraint("nobatches", constraintName);
+    await queryInterface.removeConstraint("noBatches", constraintName);
   },
 };

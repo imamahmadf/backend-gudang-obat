@@ -17,6 +17,7 @@ module.exports = {
     const year = parseInt(req.query.year) || 2025;
     const startDate = req.query.startDate;
     const endDate = req.query.endDate;
+    // console.log(year);
     try {
       const result = await amprahanItem.findAll({
         include: [
@@ -82,6 +83,7 @@ module.exports = {
   getTujuanObat: async (req, res) => {
     const obatId = req.params.obatId;
     const year = parseInt(req.query.year) || 2025;
+    // console.log(year);
     try {
       const result = await obat.findAll({
         where: {
@@ -191,6 +193,41 @@ module.exports = {
       console.log(err);
       return res.status(500).json({
         message: err,
+      });
+    }
+  },
+  getDaftarObat: async (req, res) => {
+    try {
+      const perhitungan = await obat.findAll({
+        include: [
+          {
+            model: noBatch,
+            required: true,
+          },
+        ],
+      });
+
+      var jumlah = 0;
+      var totalAset = 0;
+      perhitungan.map((val, idx) => {
+        val.noBatches.map((val2, idx2) => {
+          jumlah = jumlah + val2.stok * val2.harga;
+        });
+        totalAset += jumlah;
+        jumlah = 0;
+      });
+      const perhitunganObat = await obat.findAll({});
+      const perhitunganItem = await noBatch.findAll({ where: { status: 1 } });
+
+      res.status(200).send({
+        totalAset,
+        totalObat: perhitunganObat.length,
+        totalItem: perhitunganItem.length,
+      });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json({
+        massage: err,
       });
     }
   },

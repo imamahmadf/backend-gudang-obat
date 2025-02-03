@@ -2,7 +2,7 @@ const currentDate = new Date();
 const kelasterapis = [
   {
     id: 1,
-    nama: "Antibakteri",
+    nama: "-",
     createdAt: currentDate,
     updatedAt: currentDate,
   },

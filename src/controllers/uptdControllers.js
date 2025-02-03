@@ -58,7 +58,7 @@ module.exports = {
   addPerusahaan: async (req, res) => {
     const transaction = await sequelize.transaction();
     const { nama, alamat } = req.query;
-    console.log(req.query, "cek perusahaan");
+    // console.log(req.query, "cek perusahaan");
     try {
       const newPerusahaan = await uptd.create(
         {

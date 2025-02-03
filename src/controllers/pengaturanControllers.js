@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   postSatuan: async (req, res) => {
-    console.log(req.query);
+    // console.log(req.query);
     try {
       const newSatuan = await satuan.create({
         nama: req.query.nama,
@@ -65,7 +65,7 @@ module.exports = {
   },
 
   postAplikasi: async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const { nama, warna } = req.body;
     try {
       const newAplikasi = await aplikasi.create({
@@ -100,7 +100,7 @@ module.exports = {
   },
 
   postKelasTerapi: async (req, res) => {
-    console.log(req.query, "KELASTERAPI");
+    // console.log(req.query, "KELASTERAPI");
     try {
       const newKelasTerapi = await kelasterapi.create({
         nama: req.query.nama,
@@ -117,7 +117,7 @@ module.exports = {
   },
 
   postSumberDana: async (req, res) => {
-    console.log(req.query, "Sumber DANA");
+    // console.log(req.query, "Sumber DANA");
     try {
       const newSumberDana = await sumberDana.create({
         sumber: req.query.sumber,
@@ -134,7 +134,7 @@ module.exports = {
   },
 
   postTujuan: async (req, res) => {
-    console.log(req.query, "TUJUANNNN");
+    // console.log(req.query, "TUJUANNNN");
     try {
       const newTujuan = await uptd.create({
         nama: req.query.nama,

@@ -20,7 +20,7 @@ module.exports = {
     const transaction = await sequelize.transaction();
     try {
       const obatId = req.params.obatId;
-      console.log(obatId, "ADMIN");
+      // console.log(obatId, "ADMIN");
       const result = await amprahanItem.findAll({
         order: [["createdAt", "DESC"]],
         include: [
@@ -97,7 +97,7 @@ module.exports = {
   },
   editAmprahanItem: async (req, res) => {
     const { id, sisa, permintaan } = req.body;
-    console.log(req.body, "INI data dari admin fornt end");
+    // console.log(req.body, "INI data dari admin fornt end");
     try {
       await amprahanItem.update(
         {
@@ -146,7 +146,7 @@ module.exports = {
   },
   deleteAmprahanItem: async (req, res) => {
     const id = req.body.id;
-    console.log(id);
+    // console.log(id);
     try {
       amprahanItem.destroy({
         where: {
@@ -166,7 +166,7 @@ module.exports = {
 
   editNoBatch: async (req, res) => {
     const { stok, id } = req.body;
-    console.log(id, stok);
+    // console.log(id, stok);
     try {
       const result = await noBatch.update(
         {
@@ -188,7 +188,7 @@ module.exports = {
   },
   editTotalStok: async (req, res) => {
     const { totalStok, id } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     try {
       const result = await obat.update(
         { totalStok },

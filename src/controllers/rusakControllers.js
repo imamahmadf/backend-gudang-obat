@@ -76,7 +76,7 @@ module.exports = {
   },
 
   postItemRusak: async (req, res) => {
-    console.log(req.query, "CEK DATA UNTUK ALOKASI DAN AMPRAHAN");
+    // console.log(req.query, "CEK DATA UNTUK ALOKASI DAN AMPRAHAN");
     const transaction = await sequelize.transaction();
     try {
       const {

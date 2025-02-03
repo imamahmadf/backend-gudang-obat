@@ -8,6 +8,10 @@ const {
   satuan,
   sequelize,
   alokasi,
+  kategori,
+  aplikasi,
+  sumberDana,
+  kelasterapi,
 } = require("../models");
 const { Op, where } = require("sequelize");
 
@@ -63,6 +67,7 @@ module.exports = {
                         where: {
                           id,
                         },
+
                         required: true,
                       },
                     ],
@@ -89,6 +94,23 @@ module.exports = {
               },
             },
           },
+          {
+            model: kategori,
+            attributes: ["nama"],
+          },
+          {
+            model: kelasterapi,
+            attributes: ["nama"],
+          },
+          {
+            model: aplikasi,
+            attributes: ["nama", "warna"],
+          },
+          {
+            model: satuan,
+            attributes: ["nama"],
+          },
+          { model: sumberDana },
         ],
       });
 
@@ -104,7 +126,7 @@ module.exports = {
     const transaction = await sequelize.transaction();
     const tujuanId = req.body.tujuanId;
     const judulAlokasi = req.body.judul;
-    console.log(req.body, "ALOKASI");
+    // console.log(req.body, "ALOKASI");
     try {
       const newAlokasi = await alokasi.create(
         {
@@ -175,7 +197,7 @@ module.exports = {
   getDetailAlokasi: async (req, res) => {
     const id = req.params.alokasiId;
     try {
-      console.log(req.params.alokasiId, "ALOKASI IO DARI FRONTEND");
+      // console.log(req.params.alokasiId, "ALOKASI IO DARI FRONTEND");
       const result = await alokasi.findOne({
         where: {
           id,

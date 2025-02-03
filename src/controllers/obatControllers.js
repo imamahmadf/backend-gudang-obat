@@ -37,7 +37,7 @@ module.exports = {
       const sumberDanaId = parseInt(req.query.sumberDanaId);
       const profileReudxId = parseInt(req.query.profileReduxId);
       // console.log(req.file.filename, "filenama tes123");
-      console.log(req.query, "TES OBAT");
+      // console.log(req.query, "TES OBAT");
 
       const newObat = await obat.create(
         {
@@ -67,7 +67,7 @@ module.exports = {
         },
         { transaction }
       );
-      console.log(newObat.id, "INI ID ONBATNYAAAAA");
+      // console.log(newObat.id, "INI ID ONBATNYAAAAA");
       // const riwayatObat = await riwayat.create(
       //   {
       //     obatId: parseInt(newObat.id),
@@ -111,7 +111,7 @@ module.exports = {
     const satuanId = parseInt(req.query.satuanId);
     const aplikasiId = parseInt(req.query.aplikasiId);
     const offset = limit * page;
-    console.log(req.query);
+    // console.log(req.query);
 
     const whereCondition = {
       nama: { [Op.like]: "%" + search + "%" },
@@ -301,7 +301,7 @@ module.exports = {
   getNamaObat: async (req, res) => {
     const profileId = req.query.profileId;
 
-    console.log(profileId, "INI PROFILEID DRI FE");
+    // console.log(profileId, "INI PROFILEID DRI FE");
 
     const whereCondition = {};
     if (parseInt(profileId) !== 0) {
@@ -390,7 +390,7 @@ module.exports = {
 
   deletObat: async (req, res) => {
     const { id, old_img } = req.body;
-    console.log(id, old_img, "INI DETELTE");
+    // console.log(id, old_img, "INI DETELTE");
     await obat.destroy({
       include: [
         {
@@ -403,7 +403,7 @@ module.exports = {
     });
 
     const path = `${__dirname}/../public${old_img}`;
-    console.log(path);
+    // console.log(path);
     fs.unlink(path, (err) => {
       if (err) {
         console.error(err);
@@ -438,6 +438,10 @@ module.exports = {
             {
               model: aplikasi,
               attributes: ["nama", "id"],
+            },
+            {
+              model: sumberDana,
+              attributes: ["sumber", "id"],
             },
             {
               model: noBatch,
@@ -495,7 +499,7 @@ module.exports = {
     const puskesmasId = parseInt(req.query.puskesmasId);
     const jenis = parseInt(req.query.jenis);
     const offset = limit * page;
-    console.log(id, "CEK DISINI WOI");
+    // console.log(id, "CEK DISINI WOI");
     const whereCondition = {};
 
     const whereConditionPKM = {};
@@ -657,9 +661,10 @@ module.exports = {
       profileId,
       kode,
       aplikasiFE,
+      sumberDanaFE,
     } = req.body;
 
-    console.log(req.body, "DATA EDIT OBAT!!!!");
+    // console.log(req.body, "DATA EDIT OBAT!!!!");
 
     let riwayatFE = "";
     try {
@@ -670,6 +675,7 @@ module.exports = {
           satuanId: parseInt(satuanFE.id),
           kategoriId: parseInt(kategoriFE.id),
           aplikasiId: parseInt(aplikasiFE.id),
+          sumberDanaId: parseInt(sumberDanaFE.id),
         },
         {
           where: {
@@ -701,6 +707,10 @@ module.exports = {
               model: aplikasi,
               attributes: ["nama", "id"],
             },
+            {
+              model: sumberDana,
+              attributes: ["sumber", "id"],
+            },
           ],
         },
         { transaction }
@@ -716,6 +726,8 @@ module.exports = {
         riwayatFE = `nama Obat diubah menjadi ${getUpdateRiwayat.nama}`;
       } else if (kode === "aplikasi") {
         riwayatFE = `Aplikasi diubah menjadi ${getUpdateRiwayat.aplikasi.nama}`;
+      } else if (kode === "sumberDana") {
+        riwayatFE = `Sumber Dana diubah menjadi ${getUpdateRiwayat.sumberDana.sumber}`;
       }
 
       const tambahRiwayat = await riwayat.create({
@@ -739,7 +751,7 @@ module.exports = {
   },
   patchPenanggungJawab: async (req, res) => {
     const { selectedIds, profileId } = req.body; // Mengambil selectedIds dari req.body
-    console.log(req.body);
+    // console.log(req.body);
 
     try {
       // Update data obat berdasarkan selectedIds
@@ -768,8 +780,8 @@ module.exports = {
     const profileId = parseInt(req.query.profileId);
     const kategoriId = parseInt(req.query.kategoriId);
     const whereCondition = { profileId };
-    console.log(req.query.profileId);
-    console.log(req.body.profileId);
+    // console.log(req.query.profileId);
+    // console.log(req.body.profileId);
     if (kategoriId) {
       whereCondition.kategoriId = kategoriId;
     }
@@ -809,7 +821,7 @@ module.exports = {
     const endDate = req.query.endDate;
     const profileId = req.params.profileId;
     const puskesmasId = req.query.puskesmasId || null;
-    console.log(profileId, startDate, endDate, puskesmasId, "INI DATA");
+    // console.log(profileId, startDate, endDate, puskesmasId, "INI DATA");
 
     const whereConditionPKM = {};
     const whereCondition = {

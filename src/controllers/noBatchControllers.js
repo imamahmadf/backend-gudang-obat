@@ -27,12 +27,12 @@ module.exports = {
         kotak,
         sumberDana,
       } = req.body;
-      console.log(req.body);
+      // console.log(req.body);
       const filePath = "noBatch";
 
       let picFE = null;
       if (req.file) {
-        console.log("GGGGGGGGGGGGGGGGGGGGGGGGGG");
+        // console.log("GGGGGGGGGGGGGGGGGGGGGGGGGG");
         const { filename } = req.file;
         picFE = `/${filePath}/${filename}`;
       }
@@ -63,7 +63,7 @@ module.exports = {
 
   tolak: async (req, res) => {
     const { id, old_img } = req.body;
-    console.log(req.body, "DDDDDDDD");
+    // console.log(req.body, "DDDDDDDD");
     try {
       if (old_img) {
         const path = `${__dirname}/../public${old_img}`;
@@ -91,10 +91,10 @@ module.exports = {
   },
   terima: async (req, res) => {
     const transaction = await sequelize.transaction();
-    console.log(req.body, "Data diterima:");
+    // console.log(req.body, "Data diterima:");
     const { exp, stok, obatId, noBatchId, perusahaanId, totalStok } = req.body;
     try {
-      console.log(req.query);
+      // console.log(req.query);
       const terima = await noBatch.update(
         {
           status: 1,
@@ -227,8 +227,8 @@ module.exports = {
   // },
 
   editNobatch: async (req, res) => {
-    console.log(req.body);
-    console.log(req.file?.filename, "NAMA FOTO DISINI!!!!!!!!!!!!!!!!!!!!!!!!");
+    // console.log(req.body);
+    // console.log(req.file?.filename, "NAMA FOTO DISINI!!!!!!!!!!!!!!!!!!!!!!!!");
 
     const { noBatchFE, exp } = req.body;
     const harga = parseInt(req.body.harga);
@@ -245,7 +245,7 @@ module.exports = {
       );
 
       if (req.file?.filename) {
-        console.log("ADA FILE YANG DIKIRIM LOHHHHHHHHHH!!!!!!!!!!!");
+        // console.log("ADA FILE YANG DIKIRIM LOHHHHHHHHHH!!!!!!!!!!!");
         const { filename } = req.file;
         if (old_img.pic != null) {
           const path = `${__dirname}/../public${old_img.pic}`;
@@ -283,7 +283,7 @@ module.exports = {
       });
     } catch (err) {
       await transaction.rollback();
-      console.log(err);
+      // console.log(err);
       return res.status(500).json({
         message: err,
       });
@@ -334,7 +334,7 @@ module.exports = {
   },
   deleteAll: async (req, res) => {
     const { old_img, id } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     try {
       if (old_img.length > 0) {
         const deletePromises = old_img.map((pic) => {

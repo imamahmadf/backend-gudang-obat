@@ -155,7 +155,7 @@ module.exports = {
   },
 
   addUser: async (req, res) => {
-    console.log(req.body, "CEK 123");
+    // console.log(req.body, "CEK 123");
     try {
       const {
         id,
@@ -244,7 +244,7 @@ module.exports = {
   },
 
   addRole: async (req, res) => {
-    console.log(req.query, "CEK TAMBA USER ROLE");
+    // console.log(req.query, "CEK TAMBA USER ROLE");
 
     try {
       const { userId, roleId } = req.query;
@@ -265,7 +265,7 @@ module.exports = {
     }
   },
   deleteRole: async (req, res) => {
-    console.log(req.query);
+    // console.log(req.query);
     try {
       const { userId, id } = req.query;
 

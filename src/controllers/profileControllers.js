@@ -7,21 +7,34 @@ const {
   profile,
   userrole,
   user,
+  userRole,
+  role,
 } = require("../models");
 const fs = require("fs");
 
 module.exports = {
   getOneProfile: async (req, res) => {
-    console.log(req.params.id);
+    // console.log(req.params.id);
     try {
       const result = await profile.findOne({
         where: {
           userId: req.params.id,
         },
+        attributes: { exclude: ["profilePic"] },
         include: [
           {
             model: user,
             attributes: ["email"],
+            include: [
+              {
+                model: userRole,
+                include: [
+                  {
+                    model: role,
+                  },
+                ],
+              },
+            ],
           },
         ],
       });
@@ -55,7 +68,7 @@ module.exports = {
   ubahProfile: async (req, res) => {
     try {
       const { nama, tanggalLahir, nip, jabatan, userId } = req.body;
-      console.log(req.body, "EFIT PROFILE");
+      // console.log(req.body, "EFIT PROFILE");
       await profile.update(
         {
           nama,
@@ -125,8 +138,8 @@ module.exports = {
   // },
 
   ubahProfileFoto: async (req, res) => {
-    console.log(req.body);
-    console.log(req.file);
+    // console.log(req.body);
+    // console.log(req.file);
     const userId = req.body.userId;
     const { filename } = req.file;
     const fileUrl = `/profile/${filename}`;

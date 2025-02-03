@@ -96,10 +96,10 @@ module.exports = {
         });
       }
 
-      console.log(
-        "Data mentah dari database:",
-        JSON.stringify(result, null, 2)
-      );
+      // console.log(
+      //   "Data mentah dari database:",
+      //   JSON.stringify(result, null, 2)
+      // );
 
       const resultJSON = result.map((item) => ({
         ...item.toJSON(),

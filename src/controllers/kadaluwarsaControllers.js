@@ -13,7 +13,7 @@ const { Op } = require("sequelize");
 module.exports = {
   getKadaluwarsa: async (req, res) => {
     try {
-      console.log(req.query, "INI DRI FE");
+      // console.log(req.query, "INI DRI FE");
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 5;
       const offset = limit * page;
@@ -56,7 +56,7 @@ module.exports = {
     const { obatId, stokEXP, perusahaanId, noBatchId, userId } = req.body;
     const expId = 25;
     const transaction = await sequelize.transaction();
-    console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    // console.log(req.body, "KADALUWARSAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     const tanggal = new Date();
     try {
       const buatAmprahan = await amprahan.create(

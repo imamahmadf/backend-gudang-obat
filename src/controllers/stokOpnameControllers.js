@@ -14,7 +14,7 @@ module.exports = {
     const { profileId } = req.params;
 
     try {
-      console.log(profileId, "INI PROFILE IDDDD");
+      // console.log(profileId, "INI PROFILE IDDDD");
 
       const result = await obat.findAll({
         where: {
@@ -52,7 +52,7 @@ module.exports = {
   },
 
   tutupSO: async (req, res) => {
-    console.log(req.body, "INI TUTUP SOOOOO");
+    // console.log(req.body, "INI TUTUP SOOOOO");
     const transaction = await sequelize.transaction();
     const dataFE = req.body;
 

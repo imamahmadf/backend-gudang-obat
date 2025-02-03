@@ -36,7 +36,7 @@ module.exports = {
       };
     }
 
-    console.log(req.query, "DARI FE");
+    // console.log(req.query, "DARI FE");
     const transaction = await sequelize.transaction();
     try {
       const kategoriFE = await kategori.findAll({ attributes: ["id", "nama"] });
@@ -81,6 +81,14 @@ module.exports = {
 
       // Proses hasil untuk mengelompokkan data
       const groupedResult = result.map((obat) => {
+        const hargaArray = [];
+
+        const daftarHarga = obat.noBatches.reduce((acc, noBatch) => {
+          if (noBatch.harga !== 0) {
+            hargaArray.push(noBatch.harga);
+          }
+          return acc + noBatch.stok * noBatch.harga;
+        }, 0);
         const penerimaan = obat.noBatches.reduce((acc, noBatch) => {
           return (
             acc +
@@ -166,6 +174,7 @@ module.exports = {
           totalAsetPemakaian,
           totalAsetObatExp,
           satuan: obat.satuan,
+          daftarHarga: hargaArray,
         };
       });
 
