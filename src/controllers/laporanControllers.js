@@ -32,11 +32,12 @@ module.exports = {
     };
     if (startDate && endDate) {
       whereCondition.tanggal = {
-        [Op.between]: [startDate, endDate],
+        [Op.between]: [new Date(startDate), new Date(endDate)],
       };
     }
 
-    // console.log(req.query, "DARI FE");
+    console.log(req.query, "DARI FE");
+    console.log("Where Condition:", whereCondition);
     const transaction = await sequelize.transaction();
     try {
       const kategoriFE = await kategori.findAll({ attributes: ["id", "nama"] });
@@ -63,11 +64,13 @@ module.exports = {
               {
                 model: amprahanItem,
                 attributes: ["id", "sisa", "permintaan"],
+                required: true,
 
                 include: [
                   {
                     model: amprahan,
                     where: whereCondition,
+                    required: true,
 
                     attributes: ["id", "StatusAmprahanId", "tanggal"],
                   },
@@ -78,6 +81,8 @@ module.exports = {
         ],
         transaction,
       });
+
+      // console.log("Hasil Query:", result);
 
       // Proses hasil untuk mengelompokkan data
       const groupedResult = result.map((obat) => {
@@ -182,6 +187,7 @@ module.exports = {
       res.status(200).send({
         result: groupedResult,
         kategoriFE,
+        resultDb: result,
       });
     } catch (err) {
       await transaction.rollback();

@@ -8,6 +8,7 @@ const {
   satuan,
   sequelize,
   StatusAmprahan,
+  sumberDana,
   alokasi,
 } = require("../models");
 
@@ -214,6 +215,9 @@ module.exports = {
                       {
                         model: satuan,
                       },
+                      {
+                        model: sumberDana,
+                      },
                     ],
                   },
                 ],
@@ -227,6 +231,7 @@ module.exports = {
           {
             model: uptd,
           },
+          { model: StatusAmprahan },
         ],
       });
       res.status(200).json({
