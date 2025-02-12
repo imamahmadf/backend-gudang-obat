@@ -37,7 +37,7 @@ module.exports = {
       const sumberDanaId = parseInt(req.query.sumberDanaId);
       const profileReudxId = parseInt(req.query.profileReduxId);
       // console.log(req.file.filename, "filenama tes123");
-      // console.log(req.query, "TES OBAT");
+      console.log(req.query.nama, "TES OBAT");
 
       const newObat = await obat.create(
         {
@@ -47,6 +47,7 @@ module.exports = {
           profileId,
           kategoriId,
           sumberDanaId,
+          aplikasiId: 1,
           totalStok: 0,
         },
         { transaction }

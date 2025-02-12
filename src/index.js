@@ -115,7 +115,8 @@ app.use((err, req, res, next) => {
 //#endregion
 
 //#region CLIENT
-const clientPath = "../../client/build";
+// const clientPath = "../../client/build";
+const clientPath = "/home/gfkpaser/frontend-gudang-obat/dist";
 app.use(express.static(join(__dirname, clientPath)));
 
 // Serve the HTML page

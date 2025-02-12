@@ -47,7 +47,6 @@ module.exports = {
         perusahaanId: parseInt(perusahaan),
         pic: picFE,
         kotak: parseInt(kotak),
-        sumberDanaId: parseInt(sumberDana),
       });
 
       return res.status(200).json({

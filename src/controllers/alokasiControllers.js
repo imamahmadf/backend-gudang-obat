@@ -219,13 +219,18 @@ module.exports = {
                 include: [
                   {
                     model: noBatch,
-                    attributes: ["id", "noBatch"],
+                    attributes: ["id", "noBatch", "exp"],
                     required: true,
                     include: [
                       {
                         model: obat,
-
                         required: true,
+                        include: [
+                          {
+                            model: satuan,
+                          },
+                          { model: sumberDana },
+                        ],
                       },
                     ],
                   },
