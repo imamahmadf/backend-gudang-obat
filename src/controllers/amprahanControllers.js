@@ -234,8 +234,21 @@ module.exports = {
           { model: StatusAmprahan },
         ],
       });
+
+      const resultStatus = await amprahan.findAll({
+        where: {
+          statusAmprahanId: {
+            [Op.between]: [1, 7],
+          },
+          isOpen: 1,
+        },
+
+        attributes: ["alokasiId", "tanggal", "isOpen", "StatusAmprahanId"],
+      });
+
       res.status(200).json({
         result,
+        resultStatus,
       });
     } catch (err) {
       console.log(err);
@@ -301,6 +314,21 @@ module.exports = {
       });
     }
   },
+
+  bukaAmprahan: async (req, res) => {
+    // console.log(req.params.id, "TUTOPPPPPPPPPP");
+    const id = req.params.id;
+    try {
+      const result = await amprahan.update({ isOpen: 1 }, { where: { id } });
+      return res.status(200).send(result);
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({
+        message: err,
+      });
+    }
+  },
+
   ubahPermintaan: async (req, res) => {
     const {
       id,

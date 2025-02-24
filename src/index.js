@@ -116,18 +116,18 @@ app.use((err, req, res, next) => {
 
 //#region CLIENT
 // const clientPath = "../../client/build";
-const clientPath = "/home/gfkpaser/frontend-gudang-obat/dist";
-app.use(express.static(join(__dirname, clientPath)));
+// const clientPath = "/home/gfkpaser/frontend-gudang-obat/dist";
+// app.use(express.static(join(__dirname, clientPath)));
 
-// Serve the HTML page
-app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, clientPath, "index.html"), (err) => {
-    if (err) {
-      console.error("Error sending index.html:", err);
-      res.status(err.status).end();
-    }
-  });
-});
+// // Serve the HTML page
+// app.get("*", (req, res) => {
+//   res.sendFile(join(__dirname, clientPath, "index.html"), (err) => {
+//     if (err) {
+//       console.error("Error sending index.html:", err);
+//       res.status(err.status).end();
+//     }
+//   });
+// });
 
 //#endregion
 
